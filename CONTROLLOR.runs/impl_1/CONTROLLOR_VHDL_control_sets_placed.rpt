@@ -1,0 +1,85 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
+| Date         : Tue Nov 24 15:13:57 2015
+| Host         : maicuong running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CONTROLLOR_VHDL_control_sets_placed.rpt
+| Design       : CONTROLLOR_VHDL
+| Device       : xc7z010
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    32 |
+| Minimum Number of register sites lost to control set restrictions |    79 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             151 |           84 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               7 |            2 |
+| Yes          | No                    | No                     |             289 |           96 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              82 |           39 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|  Clock Signal  |               Enable Signal              |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG | FILE_INPUT/BYTE_TEXT[4]_i_1_n_0          |                                        |                1 |              4 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[9]_3               |                                        |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[8]_4               |                                        |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[7]_1               |                                        |                3 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[6]_6               |                                        |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[5]_7               |                                        |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[4]_5               |                                        |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[3]_0               |                                        |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[2]_8               |                                        |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[10]_2              |                                        |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[9]_10               | FILE_INPUT/alt_stack[9][4]_i_1_n_0     |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[8]_11               | FILE_INPUT/alt_stack[8][4]_i_1_n_0     |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[7]_12               | FILE_INPUT/alt_stack[7][4]_i_1_n_0     |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[6]_13               | FILE_INPUT/alt_stack[6][4]_i_1_n_0     |                1 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[5]_14               | FILE_INPUT/alt_stack[5][4]_i_1_n_0     |                3 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[4]_15               | FILE_INPUT/alt_stack[4][4]_i_1_n_0     |                3 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[3]_16               | SET/alt_stack_reg[3][4][0]             |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[2]_17               | BYTE/alt_stack_reg[2][4][0]            |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[10]_9               | BYTE/SR[0]                             |                2 |              5 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[1][6]_i_1_n_0      |                                        |                2 |              6 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[1][6]_i_2_n_0       | FILE_INPUT/alt_stack[1][6]_i_1_n_0     |                2 |              6 |
+|  CLK_IBUF_BUFG |                                          | FILE_INPUT/trg_array_reg[9]            |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/SET_TEXT_START[4]_i_1_n_0     |                                        |                3 |              8 |
+|  CLK_IBUF_BUFG | STATE_CONTROLLOR/match_reg               | STATE_CONTROLLOR/count_out_reg_reg[31] |               19 |             31 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_top                      |                                        |                8 |             31 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_top[0]_i_1_n_0            |                                        |                8 |             31 |
+|  CLK_IBUF_BUFG | start                                    |                                        |               17 |             31 |
+|  CLK_IBUF_BUFG | STATE_CONTROLLOR/count_out_reg_reg[0][0] |                                        |                8 |             32 |
+|  CLK_IBUF_BUFG | STATE_CONTROLLOR/E[0]                    |                                        |                9 |             32 |
+| ~CLK_IBUF_BUFG |                                          |                                        |               10 |             34 |
+|  CLK_IBUF_BUFG | FILE_INPUT/E[0]                          |                                        |               26 |             69 |
+|  CLK_IBUF_BUFG |                                          |                                        |               74 |            117 |
++----------------+------------------------------------------+----------------------------------------+------------------+----------------+
+
+
