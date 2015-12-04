@@ -18,7 +18,7 @@ architecture Behavioral of OBYTE_VHDL is
 
    signal count_out_reg : integer := 1;
 	signal match_reg : std_logic ;
-	signal rdy_reg : std_logic := '0' ;
+	--signal rdy_reg : std_logic := '0' ;
 	
 begin
 	
@@ -30,9 +30,9 @@ begin
 				match_reg <= '0' ;
 			elsif (TRG_ONE = '1') then
 				if(TEXT_IN = NEZ_IN) then
-					count_out_reg <= COUNT_IN + 1;
+					--count_out_reg <= COUNT_IN + 1;
 				else
-					count_out_reg <= COUNT_IN ;
+					--count_out_reg <= COUNT_IN ;
 				end if;
 				match_reg <= '1' ;
 			else
@@ -41,24 +41,7 @@ begin
 		end if;
 	end process;
 	
-	----------------------------------------------
-	--rdy_reg
-	----------------------------------------------
-	process (CLK)
-	begin
-		if (CLK'event and CLK = '1') then
-			if (R='1') then
-				rdy_reg <= '0';
-			elsif (match_reg = '1') then
-				rdy_reg <= '1';
-			else
-				rdy_reg <= '0';
-			end if;
-		end if;
-	end process;
-	------------------------------------
-	
 	COUNT_OUT <= count_out_reg ;
-	RDY_ONE <= rdy_reg ;
+	RDY_ONE <= match_reg ;
 	
 end Behavioral;

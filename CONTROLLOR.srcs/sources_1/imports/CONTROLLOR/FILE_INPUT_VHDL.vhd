@@ -37,9 +37,11 @@ architecture behave of FILE_INPUT_VHDL is
 	char_second : character;
 	option : integer;
   end record;
-  type cmd_record_array is array(1 to 30) of cmd_record;
+  type cmd_record_array is array(1 to 119) of cmd_record;
   signal command_array : cmd_record_array := (others => (id => 0, save => 0 , next_cmd => 0,
                                                          char_first => ' ', char_second => ' ', option => 0));
+                                                         
+  
 																			
   type int_array is array(1 to 10) of integer;
   signal call_stack : int_array := (others => 0);

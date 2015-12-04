@@ -61,7 +61,7 @@ begin
 		 variable j,n:         natural := 1;
 		 variable str_line_no_var,char_no_var : integer := 1;
 		 
-		 type string_array is array(1 to 3) of string(1 to 10);
+		 type string_array is array(1 to 1) of string(1 to 100);
 	    variable text_string_array : string_array := (others => (others => ' '));
        
    begin
@@ -115,7 +115,7 @@ begin
 				--if(str_line_no_var <3) then
 				str_line_no_var := str_line_no_var + 1;
 				char_no_var := 1;
-				exit when str_line_no_var > 3;
+				exit when str_line_no_var > 2;
 				--end if;
 			else
 				char_no_var := char_no_var + 1;

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="C:/FPGAPrj/VIVADO/CONTROLLOR/CONTROLLOR.xpr">
+<Project Version="7" Minor="10" Path="C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7673fcf6d76b4e3ab9a551fc50e85fa8"/>
@@ -23,12 +23,36 @@
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/CONTROLLOR.ip_user_files"/>
-    <Option Name="IPStaticSourceDir" Val="$PPRDIR/CONTROLLOR.ip_user_files/ipstatic"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/../CONTROLLOR/CONTROLLOR.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/NANY_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1448519493"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/STR_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/STR_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1448513785"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/OBYTE_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1448440768"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/SET_VHDL.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/SET_VHDL.vhd"/>
