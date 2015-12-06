@@ -2,8 +2,8 @@
 # Vivado v2015.3 (64-bit)
 # SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
 # IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
-# Start of session at: Fri Nov 27 17:57:18 2015
-# Process ID: 5776
+# Start of session at: Sun Dec 06 16:32:50 2015
+# Process ID: 3044
 # Current directory: C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.runs/synth_1
 # Command line: vivado.exe -log CONTROLLOR_VHDL.vds -mode batch -messageDb vivado.pb -notrace -source CONTROLLOR_VHDL.tcl
 # Log file: C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.runs/synth_1/CONTROLLOR_VHDL.vds
@@ -15,40 +15,58 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 261.387 ; gain = 90.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 261.855 ; gain = 91.109
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:15]
-INFO: [Synth 8-3491] module 'FILE_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:7' bound to instance 'FILE_INPUT' of component 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:28]
-INFO: [Synth 8-4471] merging register 'CMD_LINE_NO_reg[30:0]' into 'cmd_read_no_reg[30:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:420]
-INFO: [Synth 8-256] done synthesizing module 'FILE_INPUT_VHDL' (1#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:28]
-INFO: [Synth 8-3491] module 'TEXT_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:35' bound to instance 'TEXT_INPUT' of component 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:278]
-INFO: [Synth 8-638] synthesizing module 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'TEXT_INPUT_VHDL' (2#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:45]
-INFO: [Synth 8-3491] module 'STATE_CONTROLLOR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:5' bound to instance 'STATE_CONTROLLOR' of component 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:292]
-INFO: [Synth 8-638] synthesizing module 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'STATE_CONTROLLOR_VHDL' (3#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:25]
-INFO: [Synth 8-3491] module 'BYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:5' bound to instance 'BYTE' of component 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
+INFO: [Synth 8-3491] module 'FILE_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:7' bound to instance 'FILE_INPUT' of component 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'FILE_INPUT_VHDL' (1#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:30]
+INFO: [Synth 8-3491] module 'TEXT_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:5' bound to instance 'TEXT_INPUT' of component 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'TEXT_INPUT_VHDL' (2#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:14]
+INFO: [Synth 8-3491] module 'STATE_CONTROLLOR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:5' bound to instance 'STATE_CONTROLLOR' of component 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:228]
+INFO: [Synth 8-638] synthesizing module 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'STATE_CONTROLLOR_VHDL' (3#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:21]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
+INFO: [Synth 8-3491] module 'BYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:5' bound to instance 'BYTE' of component 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:244]
 INFO: [Synth 8-638] synthesizing module 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'BYTE_VHDL' (4#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:18]
-INFO: [Synth 8-3491] module 'SET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:5' bound to instance 'SET' of component 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:323]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
+INFO: [Synth 8-3491] module 'SET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:5' bound to instance 'SET' of component 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:254]
 INFO: [Synth 8-638] synthesizing module 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'SET_VHDL' (5#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:20]
-INFO: [Synth 8-3491] module 'RSET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:5' bound to instance 'RSET' of component 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:336]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
+WARNING: [Synth 8-5640] Port 'continue_trg' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
+INFO: [Synth 8-3491] module 'RSET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:5' bound to instance 'RSET' of component 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
 INFO: [Synth 8-638] synthesizing module 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'RSET_VHDL' (6#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:22]
-INFO: [Synth 8-3491] module 'OBYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:5' bound to instance 'OBYTE' of component 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:351]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
+INFO: [Synth 8-3491] module 'OBYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:5' bound to instance 'OBYTE' of component 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:276]
 INFO: [Synth 8-638] synthesizing module 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'OBYTE_VHDL' (7#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:17]
-INFO: [Synth 8-3491] module 'STR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:5' bound to instance 'STR' of component 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:361]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
+INFO: [Synth 8-3491] module 'STR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:5' bound to instance 'STR' of component 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:284]
 INFO: [Synth 8-638] synthesizing module 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'STR_VHDL' (8#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:18]
-INFO: [Synth 8-3491] module 'NANY_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:5' bound to instance 'NANY' of component 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:372]
+WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
+WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
+WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
+INFO: [Synth 8-3491] module 'NANY_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:5' bound to instance 'NANY' of component 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:293]
 INFO: [Synth 8-638] synthesizing module 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'NANY_VHDL' (9#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'CONTROLLOR_VHDL' (10#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'CONTROLLOR_VHDL' (10#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 330.926 ; gain = 159.625
+Finished RTL Elaboration : Time (s): cpu = 00:01:33 ; elapsed = 00:01:37 . Memory (MB): peak = 574.230 ; gain = 403.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,11 +75,15 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin OBYTE:TRG_ONE to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:351]
-WARNING: [Synth 8-3295] tying undriven pin STR:TRG_ONE to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:361]
-WARNING: [Synth 8-3295] tying undriven pin NANY:TRG_ONE to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:372]
+WARNING: [Synth 8-3295] tying undriven pin BYTE:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:244]
+WARNING: [Synth 8-3295] tying undriven pin SET:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:254]
+WARNING: [Synth 8-3295] tying undriven pin RSET:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
+WARNING: [Synth 8-3295] tying undriven pin RSET:CONTINUE_TRG to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
+WARNING: [Synth 8-3295] tying undriven pin OBYTE:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:276]
+WARNING: [Synth 8-3295] tying undriven pin STR:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:284]
+WARNING: [Synth 8-3295] tying undriven pin NANY:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:293]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 330.926 ; gain = 159.625
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:38 ; elapsed = 00:01:42 . Memory (MB): peak = 574.230 ; gain = 403.484
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,162 +99,287 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 640.258 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 871.047 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished Constraint Validation : Time (s): cpu = 00:02:05 ; elapsed = 00:02:09 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:05 ; elapsed = 00:02:09 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:05 ; elapsed = 00:02:09 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][save][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][id][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][id][31:0]' into 'command_array_reg[3][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][option][31:0]' into 'command_array_reg[6][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][next_cmd][31:0]' into 'command_array_reg[8][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][id][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][next_cmd][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[13][id][31:0]' into 'command_array_reg[8][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][save][31:0]' into 'command_array_reg[15][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][save][31:0]' into 'command_array_reg[16][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][option][31:0]' into 'command_array_reg[17][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][id][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][id][31:0]' into 'command_array_reg[3][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_first][7:0]' into 'command_array_reg[3][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_second][7:0]' into 'command_array_reg[3][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][option][31:0]' into 'command_array_reg[17][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[21][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[21][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[22][id][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[23][id][31:0]' into 'command_array_reg[17][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[24][id][31:0]' into 'command_array_reg[8][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[25][id][31:0]' into 'command_array_reg[3][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[25][option][31:0]' into 'command_array_reg[1][save][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[26][char_first][7:0]' into 'command_array_reg[25][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[26][char_second][7:0]' into 'command_array_reg[25][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-4471] merging register 'command_array_reg[26][option][31:0]' into 'command_array_reg[1][save][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:163]
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:303]
-INFO: [Synth 8-5545] ROM "alt_stack_reg[1]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'command_array_reg[1][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][id][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][id][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][id][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][save][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][save][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][id][31:0]' into 'command_array_reg[13][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][save][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_second][7:0]' into 'command_array_reg[18][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[21][id][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Synth 8-4471] merging register 'command_array_reg[21][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:306]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:294]
+INFO: [Synth 8-5587] ROM size for "cmd_read_no" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "alt_stack_reg[1]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_top" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[1]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[10]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "BYTE_TEXT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "SET_TEXT_START" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "SET_OPTION" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "text_string_array_reg[1][100]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[11]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[12]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[13]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[14]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[15]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[16]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[17]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[18]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[19]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[20]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[21]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[22]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[23]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[24]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[25]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[26]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[27]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[28]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[29]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[30]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[31]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[32]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[33]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[34]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[35]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[36]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[37]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[38]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[39]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[40]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[41]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[42]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[43]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[44]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[45]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[46]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[47]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[48]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[49]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[50]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alt_stack_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "match_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fail_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:33 ; elapsed = 00:02:39 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+----------------------+------------+----------+
-|      |RTL Partition         |Replication |Instances |
-+------+----------------------+------------+----------+
-|1     |TEXT_INPUT_VHDL__GB0  |           1|     45016|
-|2     |TEXT_INPUT_VHDL__GB1  |           1|     11961|
-|3     |CONTROLLOR_VHDL__GCB0 |           1|     46588|
-|4     |CONTROLLOR_VHDL__GCB1 |           1|      7502|
-+------+----------------------+------------+----------+
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |FILE_INPUT_VHDL__GB0 |           1|     41817|
+|2     |FILE_INPUT_VHDL__GB1 |           1|     15428|
+|3     |FILE_INPUT_VHDL__GB2 |           1|     19492|
+|4     |FILE_INPUT_VHDL__GB3 |           1|     26586|
+|5     |CONTROLLOR_VHDL__GC0 |           1|      1734|
++------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 27    
-	   3 Input     32 Bit       Adders := 3     
-	   2 Input     31 Bit       Adders := 5     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 31    
-	               31 Bit    Registers := 21    
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 112   
+	               32 Bit    Registers := 47    
+	               31 Bit    Registers := 79    
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 49    
+	                7 Bit    Registers := 2     
 	                1 Bit    Registers := 19    
-+---Multipliers : 
-	                 5x32  Multipliers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 105   
-	   5 Input     32 Bit        Muxes := 11    
-	 119 Input     32 Bit        Muxes := 2     
-	  11 Input     32 Bit        Muxes := 2     
+	  16 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	  12 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 12    
-	 119 Input     31 Bit        Muxes := 1     
-	   5 Input     31 Bit        Muxes := 2     
-	   2 Input     15 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 3576  
-	   4 Input      8 Bit        Muxes := 12    
-	   6 Input      8 Bit        Muxes := 1     
-	 119 Input      8 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 10    
-	 119 Input      4 Bit        Muxes := 2     
-	 119 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 135   
-	   5 Input      1 Bit        Muxes := 23    
-	  10 Input      1 Bit        Muxes := 5     
+	   5 Input     31 Bit        Muxes := 1     
+	  12 Input     31 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	  14 Input     20 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	  42 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	 125 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	  11 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	 125 Input      4 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 99    
+	   5 Input      1 Bit        Muxes := 83    
+	  14 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -245,54 +392,85 @@ Module CONTROLLOR_VHDL
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 20    
-Module TEXT_INPUT_VHDL 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 22    
-	   3 Input     32 Bit       Adders := 3     
-	   2 Input     31 Bit       Adders := 2     
-+---Registers : 
-	               32 Bit    Registers := 2     
-	               31 Bit    Registers := 2     
-	                8 Bit    Registers := 101   
-+---Multipliers : 
-	                 5x32  Multipliers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 74    
-	   2 Input     31 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 3576  
-	   4 Input      8 Bit        Muxes := 12    
-	   2 Input      1 Bit        Muxes := 88    
 Module FILE_INPUT_VHDL 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
-	   2 Input     31 Bit       Adders := 3     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 24    
-	               31 Bit    Registers := 19    
-	                8 Bit    Registers := 11    
-	                1 Bit    Registers := 7     
+	               32 Bit    Registers := 42    
+	               31 Bit    Registers := 79    
+	                8 Bit    Registers := 49    
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 11    
-	   5 Input     32 Bit        Muxes := 11    
-	 119 Input     32 Bit        Muxes := 2     
-	  11 Input     32 Bit        Muxes := 2     
-	 119 Input     31 Bit        Muxes := 1     
-	   2 Input     31 Bit        Muxes := 9     
-	   5 Input     31 Bit        Muxes := 2     
-	   2 Input     15 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
-	 119 Input      8 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 10    
-	 119 Input      4 Bit        Muxes := 2     
-	 119 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 39    
-	   5 Input      1 Bit        Muxes := 23    
-	  10 Input      1 Bit        Muxes := 4     
+	  16 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	  12 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 12    
+	   5 Input     31 Bit        Muxes := 1     
+	  12 Input     31 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	  14 Input     20 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	  42 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	 125 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	  11 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	 125 Input      4 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 90    
+	   5 Input      1 Bit        Muxes := 83    
+	  14 Input      1 Bit        Muxes := 4     
+Module TEXT_INPUT_VHDL 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module STATE_CONTROLLOR_VHDL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module BYTE_VHDL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SET_VHDL 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module RSET_VHDL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module OBYTE_VHDL 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -313,40 +491,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
-Module RSET_VHDL 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module SET_VHDL 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module BYTE_VHDL 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module STATE_CONTROLLOR_VHDL 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     15 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	  10 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -359,343 +503,249 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 640.258 ; gain = 468.957
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:35 ; elapsed = 00:02:41 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "alt_stack_reg[10]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[1]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[3]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[4]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[5]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[6]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[7]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[8]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "call_stack_reg[9]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3936] Found unconnected internal register 'trg_array_reg' and it is trimmed from '16' to '15' bits. [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:43]
+INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cmd_read_no" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'STATE_CONTROLLOR/trg_array_reg' and it is trimmed from '21' to '20' bits. [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:39]
 INFO: [Synth 8-5546] ROM "NANY/fail_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:06 ; elapsed = 00:03:12 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 640.258 ; gain = 468.957
+Finished Parallel Reinference  : Time (s): cpu = 00:03:06 ; elapsed = 00:03:12 . Memory (MB): peak = 871.047 ; gain = 700.301
 
 Report RTL Partitions: 
-+------+----------------------+------------+----------+
-|      |RTL Partition         |Replication |Instances |
-+------+----------------------+------------+----------+
-|1     |TEXT_INPUT_VHDL__GB0  |           1|     13221|
-|2     |TEXT_INPUT_VHDL__GB1  |           1|     12848|
-|3     |CONTROLLOR_VHDL__GCB0 |           1|     40206|
-|4     |CONTROLLOR_VHDL__GCB1 |           1|      6572|
-+------+----------------------+------------+----------+
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |FILE_INPUT_VHDL__GB0 |           1|     32875|
+|2     |FILE_INPUT_VHDL__GB1 |           1|     15428|
+|3     |FILE_INPUT_VHDL__GB2 |           1|     19492|
+|4     |FILE_INPUT_VHDL__GB3 |           1|     24370|
+|5     |CONTROLLOR_VHDL__GC0 |           1|       967|
++------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[29] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[29] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[30] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[30] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[0] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[0] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[1] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[1] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[2] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[2] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[3] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[3] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[4] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[4] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[5] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[5] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[6] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[6] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[7] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[7] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[8] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[8] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[9] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[9] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[10] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[10] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[11] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[11] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[12] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[12] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[13] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[13] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[14] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[14] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[15] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[15] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[16] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[16] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[17] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[17] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[18] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[18] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[19] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[19] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[20] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[20] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[21] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[21] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[22] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[22] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[23] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[23] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[24] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[24] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[25] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[25] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[26] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[26] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[27] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[27] '
-INFO: [Synth 8-3886] merging instance 'TEXT_INPUTi_1/\string_line_no_reg[28] ' (FDE) to 'TEXT_INPUTi_1/\str_line_no_var_reg[28] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][0] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][0] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][0] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][0] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][0] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][2] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][2] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][2] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][2] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][2] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][1] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][1] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][1] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][1] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][1] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][3] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][3] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][3] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][3] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][3] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][4] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][4] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][4] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][4] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][4] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][5] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][5] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][5] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][5] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][5] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][6] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][6] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][6] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][6] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][6] ' (FDSE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][0] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][7] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][7] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][7] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][7] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][7] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][8] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][8] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][8] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][8] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][8] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][9] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][9] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][9] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][9] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][9] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][10] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][10] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][10] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][10] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][10] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][11] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][11] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][11] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][11] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][11] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][12] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][12] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][12] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][12] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[2][save][12] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[21][save][13] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[19][save][13] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[18][save][13] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
-INFO: [Synth 8-3886] merging instance 'i_2/FILE_INPUT/\command_array_reg[4][save][13] ' (FDRE) to 'i_2/FILE_INPUT/\command_array_reg[10][char_second][4] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[1][option][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[104][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[89][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[20][save][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[115][save][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[115][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[107][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[89][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[93][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[61][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[20][save][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[118][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[115][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[107][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[104][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[100][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[90][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[89][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[93][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[20][save][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[66][save][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[61][save][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[20][save][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[118][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[115][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[107][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[104][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[100][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[90][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[89][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[93][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[66][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[61][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[60][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[20][save][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[118][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[115][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[107][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[104][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[100][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[90][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[89][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[88][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[93][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[66][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[65][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[62][save][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (FILE_INPUTi_0/\command_array_reg[61][save][8] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[27][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[27][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[26][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[26][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[25][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[25][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[24][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[24][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[30][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[30][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[29][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[29][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[28][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[28][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[23][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[23][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[22][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[22][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[21][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[21][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[20][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[20][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[19][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[17][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[17][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[16][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[16][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[15][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[15][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[14][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[14][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[13][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[13][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[12][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[12][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[11][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[11][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[10][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[10][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[9][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[9][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[8][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[8][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[7][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[7][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[6][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[6][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[5][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[5][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[4][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[4][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[3][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[3][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[2][28] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[2][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[27][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[27][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[26][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[26][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[25][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[25][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[24][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[24][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[30][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[30][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[29][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[29][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[28][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[28][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[23][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[23][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[22][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[22][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[21][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[21][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[20][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[20][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[19][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[17][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[17][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[16][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[16][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[15][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[15][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[14][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[14][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[13][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[13][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[12][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[12][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[11][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[11][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[10][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[10][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[9][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[9][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[8][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[8][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[7][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[7][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[6][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[6][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[5][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[5][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[4][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[4][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[3][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[3][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[2][30] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[2][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[27][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[27][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[26][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[26][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[25][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[25][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[24][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[24][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[30][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[30][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[29][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[29][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[28][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[28][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[23][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[23][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[22][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[22][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[21][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[21][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[20][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[20][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[19][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[17][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[17][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[16][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[16][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[15][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[15][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[14][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[14][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[13][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[13][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[12][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[12][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[11][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[11][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[10][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[10][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[9][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[9][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[8][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[8][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[7][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[7][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[6][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[6][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[5][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[5][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[4][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[4][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[3][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[3][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[2][29] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[2][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[27][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[27][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[26][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[26][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[25][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[25][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[24][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[24][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[30][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[30][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[29][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[29][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[28][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[28][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[23][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[23][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[22][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[22][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[21][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[21][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[20][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[20][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[19][7] '
+INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/FILE_INPUT/\command_array_reg[3][char_first][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\command_array_reg[1][id][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[7][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[6][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[5][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[4][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[3][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[2][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[10][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[9][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[8][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\call_stack_reg[1][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\SET_OPTION_reg[31] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/FILE_INPUT/\SET_TEXT_START_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\SET_TEXT_START_reg[7] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/FILE_INPUT/\BYTE_TEXT_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\BYTE_TEXT_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/FILE_INPUT/\ID_reg[31] )
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][31] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][30] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][29] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][28] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][27] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][26] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][25] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][24] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][23] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][22] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][21] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][20] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][19] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][18] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][17] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][16] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][15] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][14] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][13] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][12] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][11] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][10] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][9] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][8] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][7] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[1][5] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][30] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][29] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][28] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][27] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][26] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][25] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][24] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][23] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][22] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][21] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][20] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][19] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][18] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][17] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][16] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][15] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][14] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][13] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][12] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][11] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][10] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][9] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][8] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][7] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[2][5] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][30] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][29] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][28] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][27] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][26] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][25] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][24] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][23] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][22] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][21] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][20] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][19] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][18] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][17] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][16] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][15] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][14] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][13] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][12] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][11] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][10] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][9] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][8] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][7] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[3][5] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][30] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][29] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][28] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][27] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][26] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][25] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][24] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][23] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][22] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][21] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][20] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][19] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][18] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][17] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][16] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][15] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][14] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][13] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][12] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][11] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][10] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][9] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][8] ) is unused and will be removed from module FILE_INPUT_VHDL.
-WARNING: [Synth 8-3332] Sequential element (\call_stack_reg[4][7] ) is unused and will be removed from module FILE_INPUT_VHDL.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\NANY/fail_reg_reg__0 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/match_reg_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\OBYTE/match_reg_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\STR/count_out_reg_reg[31] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:28 . Memory (MB): peak = 757.293 ; gain = 585.992
+Finished Area Optimization : Time (s): cpu = 00:03:40 ; elapsed = 00:03:47 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:19 ; elapsed = 00:01:28 . Memory (MB): peak = 757.293 ; gain = 585.992
+Finished Parallel Area Optimization  : Time (s): cpu = 00:03:40 ; elapsed = 00:03:47 . Memory (MB): peak = 871.047 ; gain = 700.301
 
 Report RTL Partitions: 
-+------+----------------------+------------+----------+
-|      |RTL Partition         |Replication |Instances |
-+------+----------------------+------------+----------+
-|1     |TEXT_INPUT_VHDL__GB0  |           1|     11627|
-|2     |TEXT_INPUT_VHDL__GB1  |           1|      4150|
-|3     |CONTROLLOR_VHDL__GCB0 |           1|      1513|
-|4     |CONTROLLOR_VHDL__GCB1 |           1|      1555|
-+------+----------------------+------------+----------+
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |FILE_INPUT_VHDL__GB0 |           1|      4179|
+|2     |FILE_INPUT_VHDL__GB1 |           1|        54|
+|3     |FILE_INPUT_VHDL__GB2 |           1|        76|
+|4     |FILE_INPUT_VHDL__GB3 |           1|        56|
+|5     |CONTROLLOR_VHDL__GC0 |           1|       287|
++------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -703,26 +753,26 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:43 . Memory (MB): peak = 757.293 ; gain = 585.992
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:58 ; elapsed = 00:04:05 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:10 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Timing Optimization : Time (s): cpu = 00:04:04 ; elapsed = 00:04:11 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
-Finished Parallel Timing Optimization  : Time (s): cpu = 00:02:00 ; elapsed = 00:02:10 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:04:04 ; elapsed = 00:04:11 . Memory (MB): peak = 871.047 ; gain = 700.301
 
 Report RTL Partitions: 
-+------+----------------------+------------+----------+
-|      |RTL Partition         |Replication |Instances |
-+------+----------------------+------------+----------+
-|1     |CONTROLLOR_VHDL__GCB0 |           1|      1513|
-|2     |CONTROLLOR_VHDL_GT0   |           1|     17332|
-+------+----------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:00 ; elapsed = 00:02:10 . Memory (MB): peak = 773.309 ; gain = 602.008
++------+---------------------+------------+----------+
+|      |RTL Partition        |Replication |Instances |
++------+---------------------+------------+----------+
+|1     |CONTROLLOR_VHDL__GC0 |           1|       287|
+|2     |CONTROLLOR_VHDL_GT0  |           1|      4365|
++------+---------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:04 ; elapsed = 00:04:11 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:17 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Technology Mapping : Time (s): cpu = 00:04:06 ; elapsed = 00:04:13 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -746,7 +796,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished IO Insertion : Time (s): cpu = 00:04:07 ; elapsed = 00:04:14 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -759,7 +809,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:02:19 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:07 ; elapsed = 00:04:14 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -771,25 +821,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:07 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:02:20 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:07 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:21 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:08 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:21 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:08 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -806,50 +856,52 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   487|
-|3     |LUT1   |   319|
-|4     |LUT2   |   870|
-|5     |LUT3   |   508|
-|6     |LUT4   |  1058|
-|7     |LUT5   |   901|
-|8     |LUT6   |  2443|
-|9     |MUXF7  |   676|
-|10    |MUXF8  |   234|
-|11    |FDRE   |   611|
-|12    |FDSE   |   439|
-|13    |IBUF   |     1|
-|14    |OBUF   |     1|
+|2     |CARRY4 |    69|
+|3     |LUT1   |   165|
+|4     |LUT2   |   178|
+|5     |LUT3   |   111|
+|6     |LUT4   |    92|
+|7     |LUT5   |   161|
+|8     |LUT6   |   604|
+|9     |MUXF7  |    36|
+|10    |FDRE   |   759|
+|11    |FDSE   |     1|
+|12    |IBUF   |     1|
+|13    |OBUF   |     1|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------+----------------------+------+
 |      |Instance           |Module                |Cells |
 +------+-------------------+----------------------+------+
-|1     |top                |                      |  8549|
-|2     |  BYTE             |BYTE_VHDL             |   156|
-|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |   822|
-|4     |  RSET             |RSET_VHDL             |    71|
-|5     |  SET              |SET_VHDL              |   824|
-|6     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    21|
-|7     |  TEXT_INPUT       |TEXT_INPUT_VHDL       |  6504|
+|1     |top                |                      |  2179|
+|2     |  BYTE             |BYTE_VHDL             |     2|
+|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |  1978|
+|4     |  NANY             |NANY_VHDL             |     1|
+|5     |  OBYTE            |OBYTE_VHDL            |     1|
+|6     |  RSET             |RSET_VHDL             |     3|
+|7     |  SET              |SET_VHDL              |     2|
+|8     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    27|
+|9     |  STR              |STR_VHDL              |    53|
 +------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:21 . Memory (MB): peak = 773.309 ; gain = 602.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:08 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1515 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:49 ; elapsed = 00:02:09 . Memory (MB): peak = 773.309 ; gain = 272.605
-Synthesis Optimization Complete : Time (s): cpu = 00:02:11 ; elapsed = 00:02:21 . Memory (MB): peak = 773.309 ; gain = 602.008
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:11 ; elapsed = 00:03:53 . Memory (MB): peak = 871.047 ; gain = 382.496
+Synthesis Optimization Complete : Time (s): cpu = 00:04:08 ; elapsed = 00:04:15 . Memory (MB): peak = 871.047 ; gain = 700.301
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 488 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'CONTROLLOR_VHDL' is not ideal for floorplanning, since the cellview 'FILE_INPUT_VHDL' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 34 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-333 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+455 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 773.309 ; gain = 586.293
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 773.309 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 17:59:45 2015...
+synth_design: Time (s): cpu = 00:04:08 ; elapsed = 00:04:14 . Memory (MB): peak = 871.047 ; gain = 683.578
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 871.047 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 06 16:37:08 2015...
