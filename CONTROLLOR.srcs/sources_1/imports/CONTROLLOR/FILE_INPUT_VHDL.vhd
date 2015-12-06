@@ -22,7 +22,7 @@ entity FILE_INPUT_VHDL is
 	--CMD_LINE_NO : out natural := 1;
 	STR_TEXT : out string(1 to 2) := "  " ;
 	END_FAIL : buffer boolean := false ;
-	PARSER_OK_END : buffer boolean := false;
+	PARSER_OK : buffer boolean := false;
 	--NEXT_TEXT_RDY : out std_logic := '0';
 	NEXT_RDY : out std_logic := '0');
 end FILE_INPUT_VHDL;
@@ -535,17 +535,10 @@ begin
           
             ID <= command_array(cmd_read_no).id;
             NEXT_RDY <= next_rdy_function(rdy_array);
-            ----------------------------------------
-            --NEXT_TEXT_RDY <= (rdy_array(1) or rdy_array(3) or rdy_array(14));
-            
-            --CMD_LINE_NO <= cmd_read_no ;
-            
             END_FAIL <= fail_sig ;
-            PARSER_OK_END <= parser_ok_sig ;
+            PARSER_OK <= parser_ok_sig ;
             
          end if;
-        --end loop;
-	
+
   end process;
-  
 end behave;

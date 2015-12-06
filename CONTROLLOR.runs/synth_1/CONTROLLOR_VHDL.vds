@@ -2,8 +2,8 @@
 # Vivado v2015.3 (64-bit)
 # SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
 # IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
-# Start of session at: Sun Dec 06 22:08:17 2015
-# Process ID: 200
+# Start of session at: Sun Dec 06 22:27:26 2015
+# Process ID: 7192
 # Current directory: C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.runs/synth_1
 # Command line: vivado.exe -log CONTROLLOR_VHDL.vds -mode batch -messageDb vivado.pb -notrace -source CONTROLLOR_VHDL.tcl
 # Log file: C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.runs/synth_1/CONTROLLOR_VHDL.vds
@@ -15,59 +15,39 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 261.418 ; gain = 90.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 258.941 ; gain = 88.129
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:17]
 INFO: [Synth 8-638] synthesizing module 'CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
 INFO: [Synth 8-3491] module 'FILE_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:7' bound to instance 'FILE_INPUT' of component 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:198]
 INFO: [Synth 8-638] synthesizing module 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:30]
 INFO: [Synth 8-256] done synthesizing module 'FILE_INPUT_VHDL' (1#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:30]
-INFO: [Synth 8-3491] module 'TEXT_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:5' bound to instance 'TEXT_INPUT' of component 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:216]
+INFO: [Synth 8-3491] module 'TEXT_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:5' bound to instance 'TEXT_INPUT' of component 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:219]
 INFO: [Synth 8-638] synthesizing module 'TEXT_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'TEXT_INPUT_VHDL' (2#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd:14]
-INFO: [Synth 8-3491] module 'STATE_CONTROLLOR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:5' bound to instance 'STATE_CONTROLLOR' of component 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:228]
+INFO: [Synth 8-3491] module 'STATE_CONTROLLOR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:5' bound to instance 'STATE_CONTROLLOR' of component 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:231]
 INFO: [Synth 8-638] synthesizing module 'STATE_CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'STATE_CONTROLLOR_VHDL' (3#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:21]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:66]
-INFO: [Synth 8-3491] module 'BYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:5' bound to instance 'BYTE' of component 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:244]
-INFO: [Synth 8-638] synthesizing module 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'BYTE_VHDL' (4#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:18]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:78]
-INFO: [Synth 8-3491] module 'SET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:5' bound to instance 'SET' of component 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:254]
-INFO: [Synth 8-638] synthesizing module 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'SET_VHDL' (5#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:20]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
-WARNING: [Synth 8-5640] Port 'continue_trg' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:91]
-INFO: [Synth 8-3491] module 'RSET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:5' bound to instance 'RSET' of component 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
-INFO: [Synth 8-638] synthesizing module 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'RSET_VHDL' (6#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:22]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:104]
-INFO: [Synth 8-3491] module 'OBYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:5' bound to instance 'OBYTE' of component 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:276]
-INFO: [Synth 8-638] synthesizing module 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'OBYTE_VHDL' (7#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:17]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:114]
-INFO: [Synth 8-3491] module 'STR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:5' bound to instance 'STR' of component 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:284]
-INFO: [Synth 8-638] synthesizing module 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'STR_VHDL' (8#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:18]
-WARNING: [Synth 8-5640] Port 'r' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
-WARNING: [Synth 8-5640] Port 'count_in' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
-WARNING: [Synth 8-5640] Port 'count_out' is missing in component declaration [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:125]
-INFO: [Synth 8-3491] module 'NANY_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:5' bound to instance 'NANY' of component 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:293]
-INFO: [Synth 8-638] synthesizing module 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'NANY_VHDL' (9#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:17]
+INFO: [Synth 8-3491] module 'BYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:5' bound to instance 'BYTE' of component 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:247]
+INFO: [Synth 8-638] synthesizing module 'BYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'BYTE_VHDL' (4#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd:15]
+INFO: [Synth 8-3491] module 'SET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:5' bound to instance 'SET' of component 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'SET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'SET_VHDL' (5#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/SET_VHDL.vhd:17]
+INFO: [Synth 8-3491] module 'RSET_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:5' bound to instance 'RSET' of component 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'RSET_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'RSET_VHDL' (6#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/RSET_VHDL.vhd:17]
+INFO: [Synth 8-3491] module 'OBYTE_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:5' bound to instance 'OBYTE' of component 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:279]
+INFO: [Synth 8-638] synthesizing module 'OBYTE_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'OBYTE_VHDL' (7#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd:14]
+INFO: [Synth 8-3491] module 'STR_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:5' bound to instance 'STR' of component 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:287]
+INFO: [Synth 8-638] synthesizing module 'STR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'STR_VHDL' (8#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STR_VHDL.vhd:15]
+INFO: [Synth 8-3491] module 'NANY_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:5' bound to instance 'NANY' of component 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:296]
+INFO: [Synth 8-638] synthesizing module 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'NANY_VHDL' (9#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'CONTROLLOR_VHDL' (10#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 349.207 ; gain = 178.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 346.727 ; gain = 175.914
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -76,15 +56,8 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin BYTE:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:244]
-WARNING: [Synth 8-3295] tying undriven pin SET:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:254]
-WARNING: [Synth 8-3295] tying undriven pin RSET:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
-WARNING: [Synth 8-3295] tying undriven pin RSET:CONTINUE_TRG to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:265]
-WARNING: [Synth 8-3295] tying undriven pin OBYTE:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:276]
-WARNING: [Synth 8-3295] tying undriven pin STR:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:284]
-WARNING: [Synth 8-3295] tying undriven pin NANY:R to constant 0 [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:293]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 349.207 ; gain = 178.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 346.727 ; gain = 175.914
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -100,22 +73,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 670.660 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 668.957 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'command_array_reg[1][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
 INFO: [Synth 8-4471] merging register 'command_array_reg[2][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:208]
@@ -328,7 +301,7 @@ INFO: [Synth 8-5546] ROM "next_sig" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5546] ROM "match_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fail_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,19 +312,19 @@ Report RTL Partitions:
 |2     |FILE_INPUT_VHDL__GB1 |           1|     15428|
 |3     |FILE_INPUT_VHDL__GB2 |           1|     19492|
 |4     |FILE_INPUT_VHDL__GB3 |           1|     26586|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      7033|
+|5     |CONTROLLOR_VHDL__GC0 |           1|      6605|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     31 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 47    
+	               32 Bit    Registers := 43    
 	               31 Bit    Registers := 79    
 	               21 Bit    Registers := 1     
 	                8 Bit    Registers := 152   
@@ -379,10 +352,9 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
 	 125 Input      4 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 98    
+	   2 Input      1 Bit        Muxes := 94    
 	   5 Input      1 Bit        Muxes := 83    
 	  14 Input      1 Bit        Muxes := 4     
-	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -451,49 +423,30 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 1     
 Module BYTE_VHDL 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module SET_VHDL 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
 Module RSET_VHDL 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module OBYTE_VHDL 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 Module STR_VHDL 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module NANY_VHDL 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -506,7 +459,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 670.660 ; gain = 500.039
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -515,10 +468,11 @@ INFO: [Synth 8-5544] ROM "cmd_read_no" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5546] ROM "next_sig" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3936] Found unconnected internal register 'STATE_CONTROLLOR/trg_array_reg' and it is trimmed from '21' to '20' bits. [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/STATE_CONTROLLOR_VHDL.vhd:39]
 INFO: [Synth 8-5546] ROM "NANY/fail_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NANY/match_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:34 ; elapsed = 00:01:38 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Parallel Reinference  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 668.957 ; gain = 498.145
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
@@ -528,7 +482,7 @@ Report RTL Partitions:
 |2     |FILE_INPUT_VHDL__GB1 |           1|     15428|
 |3     |FILE_INPUT_VHDL__GB2 |           1|     19492|
 |4     |FILE_INPUT_VHDL__GB3 |           1|     24370|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      3644|
+|5     |CONTROLLOR_VHDL__GC0 |           1|      3629|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Area Optimization
@@ -736,9 +690,9 @@ INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][27] ' (
 INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Area Optimization : Time (s): cpu = 00:02:16 ; elapsed = 00:02:20 . Memory (MB): peak = 668.957 ; gain = 498.145
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 670.660 ; gain = 500.039
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:16 ; elapsed = 00:02:20 . Memory (MB): peak = 668.957 ; gain = 498.145
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
@@ -748,7 +702,7 @@ Report RTL Partitions:
 |2     |FILE_INPUT_VHDL__GB1 |           1|        54|
 |3     |FILE_INPUT_VHDL__GB2 |           1|        76|
 |4     |FILE_INPUT_VHDL__GB3 |           1|        56|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      3043|
+|5     |CONTROLLOR_VHDL__GC0 |           1|      3019|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -757,20 +711,20 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:28 ; elapsed = 00:02:33 . Memory (MB): peak = 698.398 ; gain = 527.777
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:32 ; elapsed = 00:02:37 . Memory (MB): peak = 697.797 ; gain = 526.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:37 ; elapsed = 00:02:42 . Memory (MB): peak = 720.801 ; gain = 550.180
+Finished Timing Optimization : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 719.273 ; gain = 548.461
 ---------------------------------------------------------------------------------
-Finished Parallel Timing Optimization  : Time (s): cpu = 00:02:37 ; elapsed = 00:02:42 . Memory (MB): peak = 720.801 ; gain = 550.180
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 719.273 ; gain = 548.461
 
 Report RTL Partitions: 
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |CONTROLLOR_VHDL_GT0 |           1|      7676|
+|1     |CONTROLLOR_VHDL_GT0 |           1|      7652|
 +------+--------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:37 ; elapsed = 00:02:42 . Memory (MB): peak = 720.801 ; gain = 550.180
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 719.273 ; gain = 548.461
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
@@ -876,7 +830,7 @@ WARNING: [Synth 8-3332] Sequential element (\TEXT_INPUT/str_reg[33][5] ) is unus
 WARNING: [Synth 8-3332] Sequential element (\TEXT_INPUT/str_reg[34][7] ) is unused and will be removed from module CONTROLLOR_VHDL.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:39 ; elapsed = 00:02:45 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Technology Mapping : Time (s): cpu = 00:02:44 ; elapsed = 00:02:49 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -900,7 +854,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:02:50 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -913,7 +867,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:02:50 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -925,25 +879,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -962,11 +916,11 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    77|
 |3     |LUT1   |   163|
-|4     |LUT2   |   222|
-|5     |LUT3   |   117|
+|4     |LUT2   |   224|
+|5     |LUT3   |   114|
 |6     |LUT4   |   238|
-|7     |LUT5   |   192|
-|8     |LUT6   |   777|
+|7     |LUT5   |   191|
+|8     |LUT6   |   778|
 |9     |MUXF7  |    81|
 |10    |MUXF8  |    17|
 |11    |FDRE   |   810|
@@ -979,23 +933,23 @@ Report Instance Areas:
 +------+-------------------+----------------------+------+
 |      |Instance           |Module                |Cells |
 +------+-------------------+----------------------+------+
-|1     |top                |                      |  3198|
+|1     |top                |                      |  3197|
 |2     |  BYTE             |BYTE_VHDL             |     3|
-|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |  1998|
+|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |  1996|
 |4     |  NANY             |NANY_VHDL             |     3|
 |5     |  OBYTE            |OBYTE_VHDL            |     1|
 |6     |  RSET             |RSET_VHDL             |     4|
-|7     |  SET              |SET_VHDL              |     2|
-|8     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    29|
-|9     |  STR              |STR_VHDL              |    51|
-|10    |  TEXT_INPUT       |TEXT_INPUT_VHDL       |   995|
+|7     |  SET              |SET_VHDL              |     4|
+|8     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    27|
+|9     |  STR              |STR_VHDL              |    53|
+|10    |  TEXT_INPUT       |TEXT_INPUT_VHDL       |   994|
 +------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 554.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 307 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:02:31 . Memory (MB): peak = 725.516 ; gain = 212.871
-Synthesis Optimization Complete : Time (s): cpu = 00:02:41 ; elapsed = 00:02:47 . Memory (MB): peak = 725.516 ; gain = 554.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:59 ; elapsed = 00:02:36 . Memory (MB): peak = 725.672 ; gain = 214.570
+Synthesis Optimization Complete : Time (s): cpu = 00:02:47 ; elapsed = 00:02:51 . Memory (MB): peak = 725.672 ; gain = 554.859
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1005,8 +959,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-458 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
+459 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:42 ; elapsed = 00:02:46 . Memory (MB): peak = 725.516 ; gain = 538.172
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 725.516 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 06 22:11:07 2015...
+synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:02:52 . Memory (MB): peak = 725.672 ; gain = 538.137
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 725.672 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 06 22:30:21 2015...

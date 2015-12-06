@@ -17,20 +17,20 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	------------------------------------------------
 	component FILE_INPUT_VHDL 
 		port(
-	    CLK : in std_logic := '0';
-        TRG : in std_logic := '0';
-        RDY_IN : in std_logic := '0';
-        FAIL : in std_logic := '0' ;
-        TEXT_IN : in character := ' ';
-        ID : out integer;
-        BYTE_TEXT : out character := ' ' ;
-        SET_TEXT_START : out character := ' ' ;
-        SET_TEXT_SECOND : out character := ' ' ;
-        SET_OPTION : out integer := 0 ;
-        STR_TEXT : out string(1 to 2) := "  " ;
-        END_FAIL : buffer boolean := false ;
-        PARSER_OK_END : buffer boolean := false;
-        NEXT_RDY : out std_logic := '0');
+		CLK : in std_logic;
+		TRG : in std_logic ;
+		RDY_IN : in std_logic ;
+		FAIL : in std_logic ;
+		TEXT_IN : in character := ' ';
+		ID : out integer;
+		BYTE_TEXT : out character ;
+		SET_TEXT_START : out character ;
+	    SET_TEXT_SECOND : out character ;
+	    SET_OPTION : out integer ;
+		STR_TEXT : out string(1 to 2);
+		END_FAIL : buffer boolean ;
+	    PARSER_OK : buffer boolean ;
+		NEXT_RDY : out std_logic );
 	end component;
 	
 	
@@ -198,18 +198,21 @@ begin
 	FILE_INPUT : FILE_INPUT_VHDL
 	port map(	
 	   CLK => CLK,
-		TRG => start,
+		TRG => START,
 		RDY_IN => next_rdy,
 		FAIL => fail_reg,
-		TEXT_IN => text_in_reg,
 		ID => id_reg,
+		TEXT_IN => text_in_reg,
 		BYTE_TEXT => byte_text_reg,
 		SET_TEXT_START => set_text_start_sig,
 	   SET_TEXT_SECOND => set_text_end_sig,
 	   SET_OPTION => set_option_sig,
+		--RBYTE_TEXT => rbyte_text_reg,
 		STR_TEXT => string_nez_reg,
+		--NBYTE_TEXT => nbyte_text_reg,
+		--CMD_LINE_NO => cmd_line,
 		END_FAIL => end_fail,
-		PARSER_OK_END => end_parser_ok,
+		PARSER_OK => end_parser_ok,
 		NEXT_RDY => nosignal_rdy);
 
 

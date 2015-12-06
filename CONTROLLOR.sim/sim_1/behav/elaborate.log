@@ -1,0 +1,27 @@
+Vivado Simulator 2015.3
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.3/bin/unwrapped/win64.o/xelab.exe -wto 7673fcf6d76b4e3ab9a551fc50e85fa8 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot CONTROLLOR_VHDL_behav xil_defaultlib.CONTROLLOR_VHDL -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_textio
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behave of entity xil_defaultlib.FILE_INPUT_VHDL [file_input_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.TEXT_INPUT_VHDL [text_input_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.STATE_CONTROLLOR_VHDL [state_controllor_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.BYTE_VHDL [byte_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.SET_VHDL [set_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.RSET_VHDL [rset_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.OBYTE_VHDL [obyte_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.STR_VHDL [str_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.NANY_VHDL [nany_vhdl_default]
+Compiling architecture behavioral of entity xil_defaultlib.controllor_vhdl
+Built simulation snapshot CONTROLLOR_VHDL_behav

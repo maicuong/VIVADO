@@ -14,7 +14,7 @@ end TEXT_INPUT_VHDL;
 architecture Behavioral of TEXT_INPUT_VHDL is
 
 begin
-	process
+	process (CLK)
        file text_input : text is in "C:\FPGAPrj\CONTROLLOR\text_input.txt";
        variable l:         line;
        variable c,c_read:         character;

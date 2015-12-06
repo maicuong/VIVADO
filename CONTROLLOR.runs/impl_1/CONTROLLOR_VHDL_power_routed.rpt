@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date             : Sun Dec 06 22:13:37 2015
+| Date             : Mon Dec 07 00:29:04 2015
 | Host             : maicuong running 64-bit major release  (build 9200)
 | Command          : report_power -file CONTROLLOR_VHDL_power_routed.rpt -pb CONTROLLOR_VHDL_power_summary_routed.pb
 | Design           : CONTROLLOR_VHDL
@@ -50,8 +50,8 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.007 |        3 |       --- |             --- |
-| Slice Logic    |     0.007 |     3117 |       --- |             --- |
-|   LUT as Logic |     0.006 |     1451 |     17600 |            8.24 |
+| Slice Logic    |     0.007 |     3116 |       --- |             --- |
+|   LUT as Logic |     0.007 |     1448 |     17600 |            8.23 |
 |   CARRY4       |    <0.001 |       77 |      4400 |            1.75 |
 |   Register     |    <0.001 |     1311 |     35200 |            3.72 |
 |   F7/F8 Muxes  |    <0.001 |       98 |     17600 |            0.56 |
