@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use STD.textio.all;
 
 entity CONTROLLOR_VHDL is
 	port (
-	CLK : in std_logic ;
-	--PARSER_ERROR : out std_logic := '0';
+	CLK : in std_logic;
 	PARSER_OK : out std_logic := '0');
 end CONTROLLOR_VHDL;
 
@@ -28,8 +28,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	    SET_TEXT_SECOND : out character ;
 	    SET_OPTION : out integer ;
 		STR_TEXT : out string(1 to 2);
-		END_FAIL : buffer boolean ;
-	    PARSER_OK : buffer boolean ;
+		END_FAIL : buffer std_logic ;
+	    PARSER_OK : buffer std_logic ;
 		NEXT_RDY : out std_logic );
 	end component;
 	
@@ -141,11 +141,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	constant ARRAY_WIDTH : natural := 20 ;
 	signal byte_text_reg : character ;
 	signal set_text_start_sig, set_text_end_sig : character;
-	signal set_option_sig : integer ;
-	--signal rbyte_text_reg : character;	
+	signal set_option_sig : integer ;	
 	signal obyte_text_reg : character;
-	--signal nbyte_text_reg : character;
-	--signal pos_reg : integer := 0 ;
 
 	signal text_in_reg : character := ' ' ;
 	signal next_rdy_array : std_logic_vector(ARRAY_WIDTH downto 0) := (others => '0') ;
@@ -180,8 +177,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	end next_rdy_function;
 	
 	
-	signal end_fail : boolean := false ;
-	signal end_parser_ok : boolean := false ;
+	signal end_fail : std_logic := '0' ;
+	signal end_parser_ok : std_logic := '0' ;
 	signal string_text_reg, string_nez_reg : string(1 to 2) := "  ";
 	signal state_next : std_logic := '0';
 	
@@ -191,6 +188,7 @@ begin
 	fail_reg <= next_rdy_function(fail_reg_array) ;
 	next_text_rdy_reg <= next_rdy_array(1) or next_rdy_array(3) or continue_sig;
 	state_next <= nosignal_rdy or continue_sig;
+	PARSER_OK <= end_parser_ok;
 	
 	------------------------------------------------
 	--Need to fix when add new
@@ -303,13 +301,7 @@ begin
 
 	process(CLK)
 	begin
-	   if(CLK'event and CLK = '0') then	
-	       if(end_fail) then
-	       PARSER_ERROR <= '1' ;
-	       elsif(end_parser_ok) then
-	       PARSER_OK <= '1' ;
-	       end if;
-	       
+	   if(CLK'event and CLK = '0') then	       
 	       if(count_start < 4) then
 	       count_start <= count_start + 1;
 	       end if;
