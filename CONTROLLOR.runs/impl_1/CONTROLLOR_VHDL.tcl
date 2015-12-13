@@ -48,6 +48,7 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_property webtalk.parent_dir C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.cache/wt [current_project]
   set_property parent.project_path C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.xpr [current_project]

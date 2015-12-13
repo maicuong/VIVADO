@@ -14,7 +14,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 261.262 ; gain = 90.188
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 260.922 ; gain = 89.828
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'CONTROLLOR_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
 INFO: [Synth 8-3491] module 'FILE_INPUT_VHDL' declared at 'C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:7' bound to instance 'FILE_INPUT' of component 'FILE_INPUT_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:196]
@@ -48,7 +48,7 @@ INFO: [Synth 8-638] synthesizing module 'NANY_VHDL' [C:/FPGAPrj/VIVADO/VIVADO/CO
 INFO: [Synth 8-256] done synthesizing module 'NANY_VHDL' (9#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'CONTROLLOR_VHDL' (10#1) [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/CONTROLLOR_VHDL.vhd:11]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 340.066 ; gain = 168.992
+Finished RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 338.770 ; gain = 167.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -58,7 +58,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 340.066 ; gain = 168.992
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 338.770 ; gain = 167.676
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -74,129 +74,126 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 669.512 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 667.984 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'command_array_reg[1][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[2][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[2][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[3][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[4][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[5][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[5][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[5][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][id][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[6][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[7][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[7][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[7][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[8][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][id][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][id][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[10][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[11][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[12][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[13][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[13][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[13][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[13][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[14][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[15][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[15][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[9][save][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[15][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][save][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[16][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[17][id][31:0]' into 'command_array_reg[13][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[17][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[17][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[17][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[17][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[2][save][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[18][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_second][7:0]' into 'command_array_reg[18][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[19][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[20][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[21][id][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
-INFO: [Synth 8-4471] merging register 'command_array_reg[21][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:162]
+INFO: [Synth 8-4471] merging register 'command_array_reg[1][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[3][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[4][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[5][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][id][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[6][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[7][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[8][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][id][31:0]' into 'command_array_reg[2][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][id][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[10][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[11][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[12][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[13][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][id][31:0]' into 'command_array_reg[7][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[14][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[9][save][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_first][7:0]' into 'command_array_reg[1][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][char_second][7:0]' into 'command_array_reg[1][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[15][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][save][31:0]' into 'command_array_reg[5][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[16][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][id][31:0]' into 'command_array_reg[13][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[17][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[2][save][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[18][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][id][31:0]' into 'command_array_reg[1][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_first][7:0]' into 'command_array_reg[13][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][char_second][7:0]' into 'command_array_reg[18][char_second][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[19][option][31:0]' into 'command_array_reg[1][option][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][id][31:0]' into 'command_array_reg[15][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][next_cmd][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_first][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][char_second][7:0]' into 'command_array_reg[2][char_first][7:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[20][option][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[21][id][31:0]' into 'command_array_reg[18][id][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
+INFO: [Synth 8-4471] merging register 'command_array_reg[21][save][31:0]' into 'command_array_reg[1][next_cmd][31:0]' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:137]
 INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:238]
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:229]
-INFO: [Synth 8-5587] ROM size for "cmd_read_no" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:195]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:215]
 INFO: [Synth 8-5545] ROM "alt_stack_reg[1]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[2]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
@@ -298,22 +295,23 @@ INFO: [Synth 8-5545] ROM "alt_stack_reg[49]" won't be mapped to RAM because addr
 INFO: [Synth 8-5545] ROM "alt_stack_reg[50]" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alt_stack_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5587] ROM size for "cmd_read_no" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cmd_read_no" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_sig" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "match_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fail_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
 |      |RTL Partition        |Replication |Instances |
 +------+---------------------+------------+----------+
-|1     |FILE_INPUT_VHDL__GB0 |           1|     43754|
-|2     |FILE_INPUT_VHDL__GB1 |           1|     14659|
-|3     |FILE_INPUT_VHDL__GB2 |           1|     17799|
-|4     |FILE_INPUT_VHDL__GB3 |           1|     24135|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      6603|
+|1     |FILE_INPUT_VHDL__GB0 |           1|     45235|
+|2     |FILE_INPUT_VHDL__GB1 |           1|     13536|
+|3     |CONTROLLOR_VHDL__GC0 |           1|      6603|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -330,15 +328,15 @@ Detailed RTL Component Info :
 	               21 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
 	                8 Bit    Registers := 152   
-	                1 Bit    Registers := 15    
+	                1 Bit    Registers := 16    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
 	  12 Input     32 Bit        Muxes := 1     
 	  16 Input     32 Bit        Muxes := 1     
 	  12 Input     31 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 4     
-	   5 Input     31 Bit        Muxes := 1     
+	   4 Input     31 Bit        Muxes := 1     
 	   2 Input     21 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 1     
 	  10 Input      8 Bit        Muxes := 1     
@@ -354,8 +352,8 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
 	 125 Input      4 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 97    
-	   5 Input      1 Bit        Muxes := 84    
+	   2 Input      1 Bit        Muxes := 46    
+	   4 Input      1 Bit        Muxes := 33    
 	   6 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -380,15 +378,15 @@ Detailed RTL Component Info :
 	               31 Bit    Registers := 79    
 	               20 Bit    Registers := 1     
 	                8 Bit    Registers := 49    
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
 	  12 Input     32 Bit        Muxes := 1     
 	  16 Input     32 Bit        Muxes := 1     
 	  12 Input     31 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 3     
-	   5 Input     31 Bit        Muxes := 1     
+	   4 Input     31 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 1     
 	  10 Input      8 Bit        Muxes := 1     
 	  42 Input      8 Bit        Muxes := 1     
@@ -402,8 +400,8 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
 	 125 Input      4 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 93    
-	   5 Input      1 Bit        Muxes := 84    
+	   2 Input      1 Bit        Muxes := 42    
+	   4 Input      1 Bit        Muxes := 33    
 	   6 Input      1 Bit        Muxes := 4     
 Module TEXT_INPUT_VHDL 
 Detailed RTL Component Info : 
@@ -462,7 +460,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 669.512 ; gain = 498.438
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -471,19 +469,17 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'STATE_CONTROLLOR/tr
 INFO: [Synth 8-5546] ROM "NANY/fail_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "NANY/match_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:55 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:25 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:46 ; elapsed = 00:01:55 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Parallel Reinference  : Time (s): cpu = 00:01:18 ; elapsed = 00:01:25 . Memory (MB): peak = 667.984 ; gain = 496.891
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
 |      |RTL Partition        |Replication |Instances |
 +------+---------------------+------------+----------+
-|1     |FILE_INPUT_VHDL__GB0 |           1|     37447|
-|2     |FILE_INPUT_VHDL__GB1 |           1|     14659|
-|3     |FILE_INPUT_VHDL__GB2 |           1|     17799|
-|4     |FILE_INPUT_VHDL__GB3 |           1|     21919|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      3627|
+|1     |FILE_INPUT_VHDL__GB0 |           1|     38887|
+|2     |FILE_INPUT_VHDL__GB1 |           1|     11320|
+|3     |CONTROLLOR_VHDL__GC0 |           1|      3627|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Area Optimization
@@ -690,23 +686,18 @@ INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[20][27] ' (
 INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[19][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[19][7] '
 INFO: [Synth 8-3886] merging instance 'FILE_INPUTi_0/\call_stack_reg[18][27] ' (FDE) to 'FILE_INPUTi_0/\call_stack_reg[18][7] '
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'FILE_INPUTi_1/next_accept_reg/Q' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:216]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:216]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd:216]
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:25 ; elapsed = 00:02:36 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Area Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:01:58 . Memory (MB): peak = 667.984 ; gain = 496.891
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:25 ; elapsed = 00:02:36 . Memory (MB): peak = 669.512 ; gain = 498.438
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:01:58 . Memory (MB): peak = 667.984 ; gain = 496.891
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
 |      |RTL Partition        |Replication |Instances |
 +------+---------------------+------------+----------+
-|1     |FILE_INPUT_VHDL__GB0 |           1|      3672|
-|2     |FILE_INPUT_VHDL__GB1 |           1|        20|
-|3     |FILE_INPUT_VHDL__GB2 |           1|        21|
-|4     |FILE_INPUT_VHDL__GB3 |           1|        39|
-|5     |CONTROLLOR_VHDL__GC0 |           1|      3015|
+|1     |FILE_INPUT_VHDL__GB0 |           1|      3691|
+|2     |FILE_INPUT_VHDL__GB1 |           1|        39|
+|3     |CONTROLLOR_VHDL__GC0 |           1|      3016|
 +------+---------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -715,21 +706,22 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:41 ; elapsed = 00:02:52 . Memory (MB): peak = 687.238 ; gain = 516.164
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:14 . Memory (MB): peak = 689.570 ; gain = 518.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:52 ; elapsed = 00:03:03 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Timing Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:20 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
-Finished Parallel Timing Optimization  : Time (s): cpu = 00:02:52 ; elapsed = 00:03:03 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:02:11 ; elapsed = 00:02:20 . Memory (MB): peak = 748.031 ; gain = 576.938
 
 Report RTL Partitions: 
 +------+---------------------+------------+----------+
 |      |RTL Partition        |Replication |Instances |
 +------+---------------------+------------+----------+
-|1     |CONTROLLOR_VHDL__GC0 |           1|      3015|
-|2     |CONTROLLOR_VHDL_GT0  |           1|      3752|
+|1     |FILE_INPUT_VHDL__GB0 |           1|      3656|
+|2     |FILE_INPUT_VHDL__GB1 |           1|        39|
+|3     |CONTROLLOR_VHDL__GC0 |           1|      3016|
 +------+---------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:52 ; elapsed = 00:03:03 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:11 ; elapsed = 00:02:20 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
@@ -835,7 +827,7 @@ WARNING: [Synth 8-3332] Sequential element (\TEXT_INPUT/str_reg[33][5] ) is unus
 WARNING: [Synth 8-3332] Sequential element (\TEXT_INPUT/str_reg[34][7] ) is unused and will be removed from module CONTROLLOR_VHDL.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:54 ; elapsed = 00:03:06 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:23 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -859,7 +851,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:55 ; elapsed = 00:03:07 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished IO Insertion : Time (s): cpu = 00:02:15 ; elapsed = 00:02:24 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -872,7 +864,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:55 ; elapsed = 00:03:07 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:15 ; elapsed = 00:02:24 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -884,25 +876,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:56 ; elapsed = 00:03:07 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:56 ; elapsed = 00:03:07 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:56 ; elapsed = 00:03:08 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:56 ; elapsed = 00:03:08 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -919,16 +911,16 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    76|
-|3     |LUT1   |   128|
-|4     |LUT2   |   288|
-|5     |LUT3   |   126|
-|6     |LUT4   |   233|
-|7     |LUT5   |   151|
-|8     |LUT6   |   699|
-|9     |MUXF7  |    93|
-|10    |MUXF8  |    10|
-|11    |FDRE   |   800|
+|2     |CARRY4 |    77|
+|3     |LUT1   |   126|
+|4     |LUT2   |   284|
+|5     |LUT3   |   131|
+|6     |LUT4   |   236|
+|7     |LUT5   |   198|
+|8     |LUT6   |   638|
+|9     |MUXF7  |    90|
+|10    |MUXF8  |    11|
+|11    |FDRE   |   816|
 |12    |FDSE   |   500|
 |13    |IBUF   |     1|
 |14    |OBUF   |     1|
@@ -938,34 +930,34 @@ Report Instance Areas:
 +------+-------------------+----------------------+------+
 |      |Instance           |Module                |Cells |
 +------+-------------------+----------------------+------+
-|1     |top                |                      |  3107|
+|1     |top                |                      |  3110|
 |2     |  BYTE             |BYTE_VHDL             |     3|
-|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |  1818|
-|4     |  NANY             |NANY_VHDL             |     3|
+|3     |  FILE_INPUT       |FILE_INPUT_VHDL       |  1762|
+|4     |  NANY             |NANY_VHDL             |     4|
 |5     |  OBYTE            |OBYTE_VHDL            |     1|
 |6     |  RSET             |RSET_VHDL             |     3|
 |7     |  SET              |SET_VHDL              |     4|
-|8     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    26|
-|9     |  STR              |STR_VHDL              |    46|
-|10    |  TEXT_INPUT       |TEXT_INPUT_VHDL       |  1092|
+|8     |  STATE_CONTROLLOR |STATE_CONTROLLOR_VHDL |    25|
+|9     |  STR              |STR_VHDL              |   111|
+|10    |  TEXT_INPUT       |TEXT_INPUT_VHDL       |  1086|
 +------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:56 ; elapsed = 00:03:08 . Memory (MB): peak = 744.324 ; gain = 573.250
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 307 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:05 ; elapsed = 00:02:48 . Memory (MB): peak = 744.324 ; gain = 223.605
-Synthesis Optimization Complete : Time (s): cpu = 00:02:56 ; elapsed = 00:03:08 . Memory (MB): peak = 744.324 ; gain = 573.250
+Synthesis finished with 0 errors, 0 critical warnings and 307 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:02:06 . Memory (MB): peak = 748.031 ; gain = 226.922
+Synthesis Optimization Complete : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 748.031 ; gain = 576.938
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 33 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-457 Infos, 101 Warnings, 3 Critical Warnings and 0 Errors encountered.
+457 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:56 ; elapsed = 00:03:06 . Memory (MB): peak = 744.324 ; gain = 557.531
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 744.324 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 11 21:28:18 2015...
+synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:23 . Memory (MB): peak = 748.031 ; gain = 561.219
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 748.031 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 12 18:47:40 2015...

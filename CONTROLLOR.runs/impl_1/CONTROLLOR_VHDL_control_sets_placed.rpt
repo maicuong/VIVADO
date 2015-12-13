@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date         : Fri Dec 11 21:29:15 2015
+| Date         : Sat Dec 12 18:48:41 2015
 | Host         : maicuong running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file CONTROLLOR_VHDL_control_sets_placed.rpt
 | Design       : CONTROLLOR_VHDL
@@ -22,7 +22,7 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    93 |
+| Number of unique control sets                                     |    94 |
 | Minimum Number of register sites lost to control set restrictions |   108 |
 +-------------------------------------------------------------------+-------+
 
@@ -33,114 +33,115 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              47 |           16 |
+| No           | No                    | No                     |              49 |           19 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             513 |          129 |
-| Yes          | No                    | No                     |             366 |          116 |
+| No           | Yes                   | No                     |             527 |          137 |
+| Yes          | No                    | No                     |             366 |          126 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             374 |          109 |
+| Yes          | Yes                   | No                     |             374 |          103 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------+---------------------------------------+------------------+----------------+
-|  Clock Signal  |             Enable Signal            |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------------+---------------------------------------+------------------+----------------+
-| ~CLK_IBUF_BUFG |                                      |                                       |                1 |              1 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[4]_53          |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[13]_78          | FILE_INPUT/alt_stack[13][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[12]_12          | FILE_INPUT/alt_stack[12][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/cmd_read_no[6]_i_1_n_0    |                                       |                5 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[11]_9           | FILE_INPUT/alt_stack[11][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[10]_24          | FILE_INPUT/alt_stack[10][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[9]_42          |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[8]_56          |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[6]_55          |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[7]_41          |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[5]_54          |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[22]_48         |                                       |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[3]_40          |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[30]_52         |                                       |                5 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[2]_39          |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[29]_67         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[28]_66         |                                       |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[27]_51         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[26]_50         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[25]_65         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[24]_49         |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[23]_64         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/BYTE_TEXT[6]_i_1_n_0      |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[21]_63         |                                       |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[20]_62         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[1][6]_i_1_n_0  |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[19]_47         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[18]_46         |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[17]_45         |                                       |                5 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[16]_61         |                                       |                4 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[15]_60         |                                       |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[14]_59         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[13]_58         |                                       |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[12]_57         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[11]_44         |                                       |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[10]_43         |                                       |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[9]_36           | FILE_INPUT/alt_stack[9][6]_i_1_n_0    |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[8]_7            | FILE_INPUT/alt_stack[8][6]_i_1_n_0    |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[7]_15           | FILE_INPUT/alt_stack[7][6]_i_1_n_0    |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[6]_21           | FILE_INPUT/alt_stack[6][6]_i_1_n_0    |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[5]_33           | FILE_INPUT/alt_stack[5][6]_i_1_n_0    |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[50]_25          | FILE_INPUT/alt_stack[50][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[4]_19           | FILE_INPUT/alt_stack[4][6]_i_1_n_0    |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[49]_27          | FILE_INPUT/alt_stack[49][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[48]_38          | FILE_INPUT/alt_stack[48][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[47]_8           | FILE_INPUT/alt_stack[47][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[46]_37          | FILE_INPUT/alt_stack[46][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[45]_74          | FILE_INPUT/alt_stack[45][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[44]_3           | FILE_INPUT/alt_stack[44][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[43]_0           | FILE_INPUT/alt_stack[43][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[42]_76          | FILE_INPUT/alt_stack[42][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[41]_70          | FILE_INPUT/alt_stack[41][6]_i_1_n_0   |                4 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[40]_6           | FILE_INPUT/alt_stack[40][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[3]_69           | FILE_INPUT/alt_stack[3][6]_i_1_n_0    |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[39]_2           | FILE_INPUT/alt_stack[39][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[38]_16          | FILE_INPUT/alt_stack[38][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[37]_30          | FILE_INPUT/alt_stack[37][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[36]_17          | FILE_INPUT/alt_stack[36][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[35]_68          | FILE_INPUT/alt_stack[35][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[34]_22          | FILE_INPUT/alt_stack[34][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[33]_31          | FILE_INPUT/alt_stack[33][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[32]_75          | FILE_INPUT/alt_stack[32][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[31]_71          | FILE_INPUT/alt_stack[31][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[30]_13          | FILE_INPUT/alt_stack[30][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[2]_23           | FILE_INPUT/alt_stack[2][6]_i_1_n_0    |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[29]_14          | FILE_INPUT/alt_stack[29][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[28]_28          | FILE_INPUT/alt_stack[28][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[27]_5           | FILE_INPUT/alt_stack[27][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[26]_4           | FILE_INPUT/alt_stack[26][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[25]_32          | FILE_INPUT/alt_stack[25][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[24]_29          | FILE_INPUT/alt_stack[24][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[23]_10          | FILE_INPUT/alt_stack[23][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[22]_72          | FILE_INPUT/alt_stack[22][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[21]_35          | FILE_INPUT/alt_stack[21][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[20]_11          | FILE_INPUT/alt_stack[20][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[1][6]_i_2_n_0   | FILE_INPUT/alt_stack[1][6]_i_1_n_0    |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[19]_1           | FILE_INPUT/alt_stack[19][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[18]_20          | FILE_INPUT/alt_stack[18][6]_i_1_n_0   |                2 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[17]_34          | FILE_INPUT/alt_stack[17][6]_i_1_n_0   |                4 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[16]_26          | FILE_INPUT/alt_stack[16][6]_i_1_n_0   |                4 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[15]_73          | FILE_INPUT/alt_stack[15][6]_i_1_n_0   |                1 |              7 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[14]_18          | FILE_INPUT/alt_stack[14][6]_i_1_n_0   |                3 |              7 |
-|  CLK_IBUF_BUFG |                                      | STATE_CONTROLLOR/trg_array[1]_i_1_n_0 |                4 |             13 |
-|  CLK_IBUF_BUFG | FILE_INPUT/STR_TEXT[1][6]_i_1_n_0    |                                       |                5 |             14 |
-|  CLK_IBUF_BUFG | FILE_INPUT/SET_TEXT_START[6]_i_1_n_0 |                                       |                5 |             16 |
-|  CLK_IBUF_BUFG | BYTE/E[0]                            |                                       |                8 |             18 |
-|  CLK_IBUF_BUFG | FILE_INPUT/cmd_read_no[6]_i_1_n_0    | FILE_INPUT/cmd_read_no[30]_i_1_n_0    |                6 |             24 |
-|  CLK_IBUF_BUFG | FILE_INPUT/call_top                  |                                       |                8 |             31 |
-|  CLK_IBUF_BUFG | FILE_INPUT/alt_top[0]_i_1_n_0        |                                       |                8 |             31 |
-| ~CLK_IBUF_BUFG | sel                                  |                                       |                8 |             32 |
-|  CLK_IBUF_BUFG |                                      |                                       |               15 |             46 |
-|  CLK_IBUF_BUFG |                                      | TEXT_INPUT/str[1]1                    |              125 |            500 |
-+----------------+--------------------------------------+---------------------------------------+------------------+----------------+
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+
+|  Clock Signal  |            Enable Signal            |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+
+| ~CLK_IBUF_BUFG |                                     |                                     |                1 |              1 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[7]_70         |                                     |                5 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[15]_28         | FILE_INPUT/alt_stack[15][6]_i_1_n_0 |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[14]_24         | STR/alt_stack_reg[14][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[13]_44         | FILE_INPUT/alt_stack[13][6]_i_1_n_0 |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[12]_39         | STR/alt_stack_reg[12][6][0]         |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[11]_40         | FILE_INPUT/alt_stack[11][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/cmd_read_no[6]_i_1_n_0   |                                     |                7 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[10]_23         | STR/alt_stack_reg[10][6][0]         |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/BYTE_TEXT[6]_i_1_n_0     |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[9]_68         |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[8]_69         |                                     |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[25]_58        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[6]_71         |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[5]_72         |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[4]_73         |                                     |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[3]_74         |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[30]_60        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[2]_75         |                                     |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[29]_61        |                                     |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[28]_62        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[27]_63        |                                     |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[26]_59        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[24]_57        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[23]_49        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[22]_56        |                                     |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[21]_55        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[20]_50        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[1][6]_i_1_n_0 |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[19]_51        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[18]_52        |                                     |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[17]_54        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[16]_53        |                                     |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[15]_48        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[14]_47        |                                     |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[13]_64        |                                     |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[12]_65        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[11]_66        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_stack[10]_67        |                                     |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[9]_46          | FILE_INPUT/alt_stack[9][6]_i_1_n_0  |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[8][6]_i_2_n_0  | STR/alt_stack_reg[8][6][0]          |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[7]_25          | FILE_INPUT/alt_stack[7][6]_i_1_n_0  |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[6]_27          | STR/alt_stack_reg[6][0][0]          |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[5]_43          | STR/alt_stack_reg[5][6][0]          |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[50]_5          | STR/alt_stack_reg[50][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[4]_19          | FILE_INPUT/alt_stack[4][6]_i_1_n_0  |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[49]_4          | STR/alt_stack_reg[49][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[48]_14         | STR/alt_stack_reg[48][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[47]_0          | STR/alt_stack_reg[47][6][0]         |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[46]_8          | STR/alt_stack_reg[46][6][0]         |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[45]_13         | STR/alt_stack_reg[45][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[44]_16         | FILE_INPUT/alt_stack[44][6]_i_1_n_0 |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[43]_2          | STR/alt_stack_reg[43][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[42]_6          | FILE_INPUT/alt_stack[42][6]_i_1_n_0 |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[40]_15         | STR/alt_stack_reg[40][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[41]_7          | STR/alt_stack_reg[41][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[3]_26          | STR/alt_stack_reg[3][6][0]          |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[39]_1          | STR/alt_stack_reg[39][6][0]         |                4 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[38]_9          | STR/alt_stack_reg[38][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[37]_17         | FILE_INPUT/alt_stack[37][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[36]_12         | STR/alt_stack_reg[36][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[35]_3          | STR/alt_stack_reg[35][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[34]_10         | STR/alt_stack_reg[34][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[33]_18         | FILE_INPUT/alt_stack[33][6]_i_1_n_0 |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[32]_11         | STR/alt_stack_reg[32][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[31]_20         | STR/alt_stack_reg[31][6][0]         |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[30]_35         | FILE_INPUT/alt_stack[30][6]_i_1_n_0 |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[2][6]_i_2_n_0  | FILE_INPUT/alt_stack[2][6]_i_1_n_0  |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[29]_36         | FILE_INPUT/alt_stack[29][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[28]_33         | FILE_INPUT/alt_stack[28][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[27]_30         | STR/alt_stack_reg[27][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[26]_37         | FILE_INPUT/alt_stack[26][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[25]_34         | STR/alt_stack_reg[25][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[24]_41         | STR/alt_stack_reg[24][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[23]_31         | FILE_INPUT/alt_stack[23][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[22]_21         | STR/alt_stack_reg[22][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[21]_38         | STR/alt_stack_reg[21][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[20]_42         | STR/alt_stack_reg[20][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[1][6]_i_2_n_0  | STR/SR[0]                           |                3 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[19]_32         | STR/alt_stack_reg[19][6][0]         |                1 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[18]_22         | FILE_INPUT/alt_stack[18][6]_i_1_n_0 |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[17]_45         | STR/alt_stack_reg[17][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG | FILE_INPUT/alt_stack[16]_29         | STR/alt_stack_reg[16][6][0]         |                2 |              7 |
+|  CLK_IBUF_BUFG |                                     | FILE_INPUT/trg_array_reg[19]        |                3 |             13 |
+|  CLK_IBUF_BUFG |                                     | FILE_INPUT/rdy_array[1]_i_1_n_0     |                6 |             14 |
+|  CLK_IBUF_BUFG | FILE_INPUT/rdy_array[19]_i_1_n_0    |                                     |                4 |             14 |
+|  CLK_IBUF_BUFG | FILE_INPUT/SET_OPTION[1]_i_1_n_0    |                                     |                6 |             16 |
+|  CLK_IBUF_BUFG | BYTE/E[0]                           |                                     |                8 |             18 |
+|  CLK_IBUF_BUFG | FILE_INPUT/cmd_read_no[6]_i_1_n_0   | FILE_INPUT/cmd_read_no[30]_i_1_n_0  |                5 |             24 |
+|  CLK_IBUF_BUFG | STR/alt_top_reg[30]_0               |                                     |                8 |             31 |
+|  CLK_IBUF_BUFG | FILE_INPUT/call_top                 |                                     |                8 |             31 |
+| ~CLK_IBUF_BUFG | sel                                 |                                     |                8 |             32 |
+|  CLK_IBUF_BUFG |                                     |                                     |               18 |             48 |
+|  CLK_IBUF_BUFG |                                     | TEXT_INPUT/str[1]1                  |              128 |            500 |
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+
 
 

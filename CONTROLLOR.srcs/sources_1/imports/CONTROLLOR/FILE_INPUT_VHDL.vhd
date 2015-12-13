@@ -23,8 +23,6 @@ entity FILE_INPUT_VHDL is
 end FILE_INPUT_VHDL;
 
 architecture behave of FILE_INPUT_VHDL is
-
-  signal trg_sig : std_logic ;
  
   type cmd_record is record 
      id : integer ;
@@ -40,26 +38,11 @@ architecture behave of FILE_INPUT_VHDL is
    signal command_array : cmd_record_array := (others => (id => 0, save => 0 , next_cmd => 0,
                                                           char_first => ' ', char_second => ' ',
                                                                              char_first1 => ' ', char_second1 => ' ', option => 0));
-                                                         
-  
-																			
-  type first_jump is record
-                                                                                 cmd : integer;
-                                                                                 char1 : character;
-                                                                                 char2 : character;
-                                                                                 jump_cmd : integer;
-                                                                               end record;
-                                                                             
-                                                                               type first_jump_array is array(1 to 30) of first_jump;
-                                                                               signal first_array : first_jump_array := (others => (cmd => 0, char1 => ' ',
-                                                                                                                                                      char2 => ' ', jump_cmd => 0));
                                                                                                                                            
-                                                                               type int_alt_array is array(1 to 50) of integer;
-                                                                               signal alt_stack : int_alt_array := (others => 0) ;
-                                                                               type int_call_array is array(1 to 30) of integer;
-                                                                               signal call_stack : int_call_array := (others => 0);
-  
-  signal test : character := ' ';
+   type int_alt_array is array(1 to 50) of integer;
+   signal alt_stack : int_alt_array := (others => 0) ;
+   type int_call_array is array(1 to 30) of integer;
+   signal call_stack : int_call_array := (others => 0);
   
   --convert character to integer
   function character_to_integer(char:character) return integer is
@@ -116,19 +99,11 @@ architecture behave of FILE_INPUT_VHDL is
 	end next_rdy_function;
 
 	signal call_top : natural := 1;
-	
-	
 	signal fail_sig : boolean := false;
 	signal parser_ok_sig : boolean := false;
-
-
-	
 	signal cmd_read_no : natural := 1 ;
-	
     signal rdy_array : std_logic_vector(1 to 20) := (others => '0');
-	
 	signal next_accept : boolean := false;
-	
 	signal alt_top : natural := 1;
 	
 begin
@@ -194,185 +169,157 @@ begin
                 end if;            
 	end loop;	
 	file_close(in_file);   
-	----------------------------------------------------
-	--Saved command_array
-	----------------------------------------------------
 	end if;
 	end if;
 	end process;
-	
-	process(CLK)
-	begin
-	   if(CLK'event and CLK = '1') then
-            if(TRG = '1' or RDY_IN = '1' or FAIL = '1') then
-                          next_accept <= true ;
-                        end if;
-       end if;
-    end process;
                
     process(CLK)
     begin
        if(CLK'event and CLK = '1') then
-                       if (next_accept and (not fail_sig) and (not parser_ok_sig)) then
-                           rdy_array <= (others => '0');
-                           rdy_array( command_array(cmd_read_no).id) <= '1';
-                           next_accept <= false;
-                        else
-                           rdy_array <= (others => '0');
-                        end if;
+          if(TRG = '1' or RDY_IN = '1' or FAIL = '1') then
+            next_accept <= true ;
+          end if;
+          if (next_accept and (not fail_sig) and (not parser_ok_sig)) then
+             rdy_array <= (others => '0');
+             rdy_array( command_array(cmd_read_no).id) <= '1';
+             next_accept <= false;
+           else
+             rdy_array <= (others => '0');
+           end if;
         end if;
      end process;
-         
+      
+    process(CLK)
+    begin
+       if(CLK'event and CLK = '1') then
+           if (FAIL = '1') then 
+                    if(alt_stack(1) = 0) then 
+                        fail_sig <= true;
+                    else                                                        
+                        alt_stack(alt_top-1) <= 0;
+                        alt_top <= alt_top - 1;
+                    end if;
+       elsif ((RDY_IN = '1' or TRG = '1') and  command_array(cmd_read_no).id = 10 ) then    
+            alt_stack(alt_top) <= command_array(cmd_read_no).save;
+            alt_top <= alt_top + 1;
+       end if;
+     end if;
+   end process;
+      
      process(CLK) 
      begin
         if(CLK'event and CLK = '1') then  
-                  if (FAIL = '1') then 
-                            if(alt_stack(1) = 0) then 
-                                fail_sig <= true;
-                            else                                                        
-                                cmd_read_no <= alt_stack(alt_top-1);
-                                alt_stack(alt_top-1) <= 0;
-                                alt_top <= alt_top - 1;
-                            end if;
-             elsif (RDY_IN = '1' or TRG = '1' ) then
-                 case command_array(cmd_read_no).id is
-
-                                                                                        
-                                                                      when 9 => 
-                                                                      call_stack(call_top) <= command_array(cmd_read_no).save;
-                                                                                                     if(command_array(cmd_read_no).next_cmd /= 0) then
-                                                                                                     cmd_read_no <= command_array(cmd_read_no).next_cmd;
-                                                                                                 else
-                                                                                                     cmd_read_no <= cmd_read_no + 1;
-                                                                                                 end if;
-                                                                                                     call_top <= call_top + 1;                                                                     
-                                                                        when 10 => 
-                                                                        alt_stack(alt_top) <= command_array(cmd_read_no).save;
-                                                                                                    alt_top <= alt_top + 1;
-                                                                                                      if(command_array(cmd_read_no).next_cmd /= 0) then
-                                                                                                      cmd_read_no <= command_array(cmd_read_no).next_cmd;
-                                                                                                  else
-                                                                                                      cmd_read_no <= cmd_read_no + 1;
-                                                                                                  end if;
-                                                                        when 12 =>
-                                                                                              if(cmd_read_no = 7) then
-                                                                                                   case text_in is
-                                                                                                    when 't' => cmd_read_no <= 81;
-                                                                                                    when 'f' => cmd_read_no <= 70;
-                                                                                                    when '{' => cmd_read_no <= 86;
-                                                                                                    when '"' => cmd_read_no <= 9;
-                                                                                                    when '[' => cmd_read_no <= 58;
-                                                                                                    when 'n' => cmd_read_no <= 76;   
-                                                                                                    when 'O' => cmd_read_no <= 86;
-                                                                                                    --when ESC => cmd_read_no := 8;
-                                                                                                    when others => if(text_in >= '0' and text_in <= '9') then
-                                                                                                                    cmd_read_no <= 11;
-                                                                                                                   else 
-                                                                                                                                           cmd_read_no <= 8;
-                                                                                                                  end if;
-                                                                                                    end case;
-                                                                                                    elsif (cmd_read_no = 12) then
-                                                                                                                      case text_in is
-                                                                                                    when '4' => cmd_read_no <= 33;
-                                                                                                    when '5' => cmd_read_no <= 35;
-                                                                                                    when '6' => cmd_read_no <= 37;
-                                                                                                    when '7' => cmd_read_no <= 39;
-                                                                                                    when '8' => cmd_read_no <= 41;
-                                                                                                    when '1' => cmd_read_no <= 27;   
-                                                                                                    when '9' => cmd_read_no <= 43;
-                                                                                                    when '0' => cmd_read_no <= 13;
-                                                                                                    when '2' => cmd_read_no <= 29;   
-                                                                                                    when '3' => cmd_read_no <= 31;
-                                                                                                    --when ESC => cmd_read_no := 8;
-                                                                                                    when others => cmd_read_no <= 8;
-                                                                                                                      end case;
-                                                                                                    elsif (cmd_read_no = 14) then
-                                                                                                                      case text_in is
-                                                                                                    when '.' => cmd_read_no <= 16;   
-                                                                                                    when EOT => cmd_read_no <= 8;
-                                                                                                    when others => cmd_read_no <= 15; 
-                                                                                                                      end case;
-                                                                                                    elsif(cmd_read_no = 101) then
-                                                                                                                      case text_in is
-                                                                                                    when '"' => cmd_read_no <= 8;
-                                                                                                    when '/' => cmd_read_no <= 104;
-                                                                                                    when others => cmd_read_no <= 102;
-                                                                                                                      end case;
-                                                                                                    end if;        
+           if (FAIL = '1' and alt_stack(1) /= 0) then                                                        
+                  cmd_read_no <= alt_stack(alt_top-1);
+           elsif (RDY_IN = '1' or TRG = '1' ) then
+              case command_array(cmd_read_no).id is
+                   when 9 =>  call_stack(call_top) <= command_array(cmd_read_no).save;
+                              if(command_array(cmd_read_no).next_cmd /= 0) then
+                                cmd_read_no <= command_array(cmd_read_no).next_cmd;
+                              else
+                                cmd_read_no <= cmd_read_no + 1;
+                              end if;
+                              call_top <= call_top + 1;                                                                     
+                    when 12 => if(cmd_read_no = 7) then
+                                  case text_in is
+                                       when 't' => cmd_read_no <= 81;
+                                       when 'f' => cmd_read_no <= 70;
+                                       when '{' => cmd_read_no <= 86;
+                                       when '"' => cmd_read_no <= 9;
+                                       when '[' => cmd_read_no <= 58;
+                                       when 'n' => cmd_read_no <= 76;   
+                                       when 'O' => cmd_read_no <= 86;
+                                       when others => if(text_in >= '0' and text_in <= '9') then
+                                                         cmd_read_no <= 11;
+                                                      else 
+                                                          cmd_read_no <= 8;
+                                                       end if;
+                                   end case;
+                                 elsif (cmd_read_no = 12) then
+                                      case text_in is
+                                           when '4' => cmd_read_no <= 33;
+                                           when '5' => cmd_read_no <= 35;
+                                           when '6' => cmd_read_no <= 37;
+                                           when '7' => cmd_read_no <= 39;
+                                           when '8' => cmd_read_no <= 41;
+                                           when '1' => cmd_read_no <= 27;   
+                                           when '9' => cmd_read_no <= 43;
+                                           when '0' => cmd_read_no <= 13;
+                                           when '2' => cmd_read_no <= 29;   
+                                           when '3' => cmd_read_no <= 31;
+                                           when others => cmd_read_no <= 8;
+                                       end case;
+                                   elsif (cmd_read_no = 14) then
+                                        case text_in is
+                                            when '.' => cmd_read_no <= 16;   
+                                            when EOT => cmd_read_no <= 8;
+                                            when others => cmd_read_no <= 15; 
+                                        end case;
+                                    elsif(cmd_read_no = 101) then
+                                         case text_in is
+                                             when '"' => cmd_read_no <= 8;
+                                             when '/' => cmd_read_no <= 104;
+                                             when others => cmd_read_no <= 102;
+                                         end case;
+                                     end if;        
                                                                                     
-                                                                      when 15 => 
-                                                                      if(call_stack(1) = 0) then 
-                                                                                                          parser_ok_sig <= true;
-                                                                                                      else
-                                                                                                         cmd_read_no <= call_stack(call_top-1);
-                                                                                                          call_stack(call_top-1) <= 0;
-                                                                                                          call_top <= call_top - 1;
-                                                                                                      end if;
-                                                                        when others =>                                                                                     
-                                                                                           if(command_array(cmd_read_no).next_cmd /= 0) then
-                                                                                               cmd_read_no <= command_array(cmd_read_no).next_cmd;
-                                                                                           else
-                                                                                               cmd_read_no <= cmd_read_no + 1;
-                                                                                           end if;   
-                                                     
-                                                                    end case;
+                        when 15 => if(call_stack(1) = 0) then 
+                                       parser_ok_sig <= true;
+                                   else
+                                       cmd_read_no <= call_stack(call_top-1);
+                                       call_stack(call_top-1) <= 0;
+                                       call_top <= call_top - 1;
+                                   end if;
+                         when others =>                                                                                     
+                                   if(command_array(cmd_read_no).next_cmd /= 0) then
+                                        cmd_read_no <= command_array(cmd_read_no).next_cmd;
+                                   else
+                                        cmd_read_no <= cmd_read_no + 1;
+                                   end if;   
+                  end case;
                                                                     
-          end if;
-          end if;
-          end process;
+            end if;
+         end if;
+      end process;
           
           
- process(CLK) 
-              begin
-                 if(CLK'event and CLK = '1') then  
-                          case command_array(cmd_read_no).id is
-                                                                    when 1 =>      
-                                                                         BYTE_TEXT <= command_array(cmd_read_no).char_first;
-                                                                     
-                                                                                 when 3 => 
-                                                                                                  SET_TEXT_START <= command_array(cmd_read_no).char_first;
-                                                                                                 SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
-                                                                                                 SET_OPTION <= command_array(cmd_read_no).option;
-                                                                                 when 14 => 
-                                                                                                  SET_TEXT_START <= command_array(cmd_read_no).char_first;
-                                                                                                 SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
-                                                                                                 SET_OPTION <= command_array(cmd_read_no).option;
-
-         
-                                                                                               when 17 => 
-                                                                                                  BYTE_TEXT <= command_array(cmd_read_no).char_first;
-         
-                                                                                               when 19 =>
-                                                                                                  STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
-                                                                                 when others =>   null;                                                                                                                                              
-                                                                             end case;
-                                                                             
-                   end if;
-                   end process;
+   process(CLK) 
+     begin
+       if(CLK'event and CLK = '1') then  
+          case command_array(cmd_read_no).id is
+              when 1 =>  BYTE_TEXT <= command_array(cmd_read_no).char_first;
+              when 3 =>  SET_TEXT_START <= command_array(cmd_read_no).char_first;
+                         SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
+                         SET_OPTION <= command_array(cmd_read_no).option;
+              when 14 => SET_TEXT_START <= command_array(cmd_read_no).char_first;
+                         SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
+                         SET_OPTION <= command_array(cmd_read_no).option;
+              when 17 => BYTE_TEXT <= command_array(cmd_read_no).char_first;
+              when 19 => STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
+              when others =>   null;                                                                                                                                              
+           end case;
+        end if;
+    end process;
           
           
-            ID <= command_array(cmd_read_no).id;
-            NEXT_RDY <= next_rdy_function(rdy_array);
-            
-            PARSER_OK <= '1' when parser_ok_sig else '0';
-            END_FAIL <= '1' when fail_sig else '0';
+    ID <= command_array(cmd_read_no).id;
+    NEXT_RDY <= next_rdy_function(rdy_array);
+    PARSER_OK <= '1' when fail_sig else '0';
+    END_FAIL <= '1' when parser_ok_sig else '0';
               
-    	process(CLK)
---file output : text;
---variable f_status : FILE_OPEN_STATUS;
-variable buf_out : LINE ;
-variable end_sig : boolean := true;
-begin
- if(CLK'event and CLK = '0') then
-     --file_open(f_status, output, "STD_OUTPUT", write_mode);    
-     if(fail_sig and end_sig) then
-     write(buf_out,string'("PARSER ERROR"));
-     writeline(output,buf_out);
-     end_sig := false;
+  process(CLK)
+     variable buf_out : LINE ;
+     variable end_sig : boolean := true;
+  begin
+     if(CLK'event and CLK = '0') then  
+        if(fail_sig and end_sig) then
+             write(buf_out,string'("PARSER ERROR"));
+             writeline(output,buf_out);
+             end_sig := false;
      elsif(parser_ok_sig and end_sig) then
-     write(buf_out,string'("PARSER OK"));
-     writeline(output,buf_out);
-     end_sig := false;
+             write(buf_out,string'("PARSER OK"));
+             writeline(output,buf_out);
+             end_sig := false;
      end if;     
   end if;
 end process;
