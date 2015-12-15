@@ -117,23 +117,20 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/CONTROLLOR/math_input.txt">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/math_input.txt"/>
-          <Attr Name="ImportTime" Val="1447304600"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/constrs_1/imports/CONTROLLOR/text_input.txt">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/text_input.txt"/>
-          <Attr Name="ImportTime" Val="1447995428"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/constrs_1/new/controllor.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/constrs_1/imports/CONTROLLOR/json.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/json.txt"/>
+          <Attr Name="ImportTime" Val="1449044461"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../CONTROLLOR/text_input.txt">
+        <FileInfo RelPath="text_input.txt"/>
       </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
