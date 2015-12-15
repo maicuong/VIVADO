@@ -5,16 +5,15 @@ use STD.textio.all;
 entity CONTROLLOR_VHDL is
 	port (
 	CLK : in std_logic;
-	PARSER_OK : out std_logic := '0');
+	PARSER_OK : out std_logic := '0';
+	PARSER_ERROR : out std_logic := '0');
 end CONTROLLOR_VHDL;
 
 architecture Behavioral of CONTROLLOR_VHDL is
-    
-    signal parser_error : std_logic := '0';
-    
-	------------------------------------------------
-	--Need to fix when add new
-	------------------------------------------------
+
+    -----------------------------------------
+    -- Loading command
+    -----------------------------------------
 	component FILE_INPUT_VHDL 
 		port(
 		CLK : in std_logic;
@@ -33,7 +32,9 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		NEXT_RDY : out std_logic );
 	end component;
 	
-	
+	-------------------------------------------
+	-- Loading text
+	-------------------------------------------
 	component TEXT_INPUT_VHDL 
 	   port(
 		CLK : in std_logic ;
@@ -43,10 +44,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		STR_OUT : buffer string(1 to 2));
 	end component;
 	
-	
-	
 	------------------------------------------------
-	--Need to fix when add new
+	-- Make trigger signal to each command'IP core 
 	------------------------------------------------
 	component STATE_CONTROLLOR_VHDL
 		port (
@@ -63,10 +62,12 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		OTHERS_TRG : out std_logic);
 	end component;
 	
+	-------------------------------------------------
+	-- Command'IP core : BYTE
+	-------------------------------------------------
 	component BYTE_VHDL 
 		port(
 		CLK : in std_logic ;
-		--R : in std_logic := '0';
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in character ;
 		NEZ_IN : in character ;
@@ -74,11 +75,12 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		RDY_ONE : out std_logic);
 	end component;
 	
-	
+	--------------------------------------------------
+	-- Command'IP core : SET
+	--------------------------------------------------
 	component SET_VHDL
 		port(
 		CLK : in std_logic ;
-		--R : in std_logic ;
 		TRG_ONE : in std_logic ;
 		NEZ_IN_START : in character ;
 		NEZ_IN_END : in character ;
@@ -88,6 +90,9 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		RDY_ONE : out std_logic);
 	end component;
 	
+	----------------------------------------------------
+	-- Command'IP core : RSET
+	----------------------------------------------------
 	component RSET_VHDL 
 		port(
 		CLK : in std_logic ;
@@ -101,20 +106,24 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		RDY_ONE : out std_logic := '0');
 	end component;
 	
+	-----------------------------------------------------
+	-- Command's IP core : OBYTE
+	-----------------------------------------------------
 	component OBYTE_VHDL
 		port(
 		CLK : in std_logic ;
-		--R : in std_logic ;
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in character := 'a';
 		NEZ_IN : in character := 'a';
 		RDY_ONE : out std_logic := '0');
 	end component;
 	
+	------------------------------------------------------
+	-- Command's IP core : SRT
+	------------------------------------------------------
 	component STR_VHDL
 		port(
 		CLK : in std_logic ;
-		--R : in std_logic ;
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in string(1 to 2);
 		NEZ_IN : in string(1 to 2);
@@ -122,10 +131,12 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		RDY_ONE : out std_logic := '0');
 	end component;
 	
+    -------------------------------------------------------
+    -- Command's IP core : NANY
+    -------------------------------------------------------
 	component NANY_VHDL 
 		port(
 		CLK : in std_logic ;
-		--R : in std_logic ;
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in character := '1';
 		FAIL : out std_logic := '0' ;
@@ -133,11 +144,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	end component;
 	
 	signal count_start : integer := 0;
-	
-		
-	------------------------------------------------
-	--Need to fix when add new
-	------------------------------------------------
+
 	constant ARRAY_WIDTH : natural := 20 ;
 	signal byte_text_reg : character ;
 	signal set_text_start_sig, set_text_end_sig : character;
@@ -151,19 +158,12 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal trg_reg_array : std_logic_vector(ARRAY_WIDTH downto 1) := (others => '0') ;
 	signal fail_reg_array : std_logic_vector(ARRAY_WIDTH downto 0) := (others => '0') ;
 	signal fail_reg : std_logic := '0' ;
-
-	--signal cmd_line : natural := 1;
-	
 	signal nosignal_rdy : std_logic := '0' ;
-	
 	signal continue_sig : std_logic := '0' ;
-
 	signal next_trg : std_logic := '0' ;
-	signal next_text_rdy_reg : std_logic := '0' ;
-	
+	signal next_text_rdy_reg : std_logic := '0' ;	
 	signal start : std_logic := '0' ;
-
-	
+		
 	--next_rdy_function
 	function next_rdy_function(n:std_logic_vector) return std_logic is
 		variable i : integer;
@@ -189,30 +189,24 @@ begin
 	next_text_rdy_reg <= next_rdy_array(1) or next_rdy_array(3) or continue_sig;
 	state_next <= nosignal_rdy or continue_sig;
 	PARSER_OK <= end_parser_ok;
-	
-	------------------------------------------------
-	--Need to fix when add new
-	------------------------------------------------
+	PARSER_ERROR <= end_fail;
+
 	FILE_INPUT : FILE_INPUT_VHDL
 	port map(	
-	   CLK => CLK,
-		TRG => START,
+	    CLK => CLK,
+	    TRG => START,
 		RDY_IN => next_rdy,
 		FAIL => fail_reg,
 		ID => id_reg,
 		TEXT_IN => text_in_reg,
 		BYTE_TEXT => byte_text_reg,
 		SET_TEXT_START => set_text_start_sig,
-	   SET_TEXT_SECOND => set_text_end_sig,
-	   SET_OPTION => set_option_sig,
-		--RBYTE_TEXT => rbyte_text_reg,
+	    SET_TEXT_SECOND => set_text_end_sig,
+	    SET_OPTION => set_option_sig,
 		STR_TEXT => string_nez_reg,
-		--NBYTE_TEXT => nbyte_text_reg,
-		--CMD_LINE_NO => cmd_line,
 		END_FAIL => end_fail,
 		PARSER_OK => end_parser_ok,
 		NEXT_RDY => nosignal_rdy);
-
 
 	TEXT_INPUT : TEXT_INPUT_VHDL
 	port map(
@@ -222,16 +216,10 @@ begin
 		CHAR_OUT => text_in_reg,
 		STR_OUT => string_text_reg);
 
-
-	------------------------------------------------
-	--Need to fix when add new
-	------------------------------------------------
 	STATE_CONTROLLOR : STATE_CONTROLLOR_VHDL 
 	port map (
 		CLK => CLK ,
 		ID => id_reg ,
-		--R => '0' ,
-		--TRG_ONE => '0' ,
 		RDY_IN => state_next ,
 		BYTE_TRG => trg_reg_array(1) ,
 		SET_TRG => trg_reg_array(3),
@@ -244,7 +232,6 @@ begin
 
 	BYTE : BYTE_VHDL port map (
 		CLK => CLK ,
-		--R => '0' ,
 		TRG_ONE => trg_reg_array(1),
 		TEXT_IN => text_in_reg,
 		NEZ_IN => byte_text_reg,
@@ -254,7 +241,6 @@ begin
 		
 	SET : SET_VHDL port map (
 		CLK => CLK,
-		--R => '0',
 		TRG_ONE => trg_reg_array(3),
 		NEZ_IN_START => set_text_start_sig,
 		NEZ_IN_END => set_text_end_sig,
@@ -265,7 +251,6 @@ begin
 				
 	RSET : RSET_VHDL port map (
 		CLK => CLK,
-		--R => '0',
 		TRG_ONE => trg_reg_array(14),
 		NEZ_IN_START => set_text_start_sig,
 		NEZ_IN_END => set_text_end_sig,
@@ -276,7 +261,6 @@ begin
 		
 	OBYTE : OBYTE_VHDL port map (
 		CLK => CLK,
-		--R => '0',
 		TRG_ONE => trg_reg_array(17),
 		TEXT_IN => text_in_reg,
 		NEZ_IN => byte_text_reg,
@@ -284,7 +268,6 @@ begin
 		
    STR : STR_VHDL port map (
 		CLK => CLK,
-		--R => '0',
 		TRG_ONE => trg_reg_array(19),
 		TEXT_IN => string_text_reg,
 		NEZ_IN => string_nez_reg,
@@ -293,7 +276,6 @@ begin
 		
 	NANY : NANY_VHDL port map (
 		CLK => CLK,
-		--R => '0',
 		TRG_ONE => trg_reg_array(16),
 		TEXT_IN => text_in_reg,
 		FAIL => fail_reg_array(16),

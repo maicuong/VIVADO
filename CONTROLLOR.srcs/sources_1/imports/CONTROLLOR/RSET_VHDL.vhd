@@ -18,8 +18,6 @@ architecture Behavioral of RSET_VHDL is
 
 	
 begin
-
-	--match, count_out
 	process (CLK)
 		variable i : integer := 1;
 		variable match_reg : std_logic ;

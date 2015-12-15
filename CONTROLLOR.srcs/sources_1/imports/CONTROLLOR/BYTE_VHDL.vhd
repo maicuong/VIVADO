@@ -17,8 +17,6 @@ architecture Behavioral of BYTE_VHDL is
 	signal fail_reg : std_logic := '0' ;
 	
 begin
-	
-	--match, count_out
 	process (CLK)
 	begin
 		if(CLK'event and CLK = '1') then

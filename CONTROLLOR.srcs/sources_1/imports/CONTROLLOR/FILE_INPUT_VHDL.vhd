@@ -1,8 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 use STD.textio.all;
-use ieee.std_logic_textio.all;
 
 entity FILE_INPUT_VHDL is
         port(
@@ -63,7 +61,7 @@ architecture behave of FILE_INPUT_VHDL is
 			return int;
 	end character_to_integer;
 	
-	--convert string to integer
+	        --convert string to integer
             function string2_to_integer(str:string(1 to 2)) return integer is
                 variable int : integer;
                 variable int_1, int_10 : integer;
@@ -117,21 +115,22 @@ begin
 	 
   begin 
 	if(CLK'event and CLK = '1') then
-	
-	if(TRG = '1') then
-	 while not endfile(in_file) loop
-		readline(in_file, l);
-		for i in str'range loop
+	   if(TRG = '1') then
+	   --Loading command from text file
+	       while not endfile(in_file) loop
+		      readline(in_file, l);
+		   for i in str'range loop
 				str(i) := ' ';
-		end loop;   
-		for i in str'range loop
-			read(l, c, is_string);
-			if is_string then 
+		   end loop;   
+		   for i in str'range loop
+			 read(l, c, is_string);
+			 if is_string then 
 				str(i) := c;
-			else exit;
-			end if;
-		end loop;
+			 else exit;
+			 end if;
+		   end loop;
 	 	
+	 	-- Saving command
 		if(str(2) /= 'F') then
                 cmd_no := string3_to_integer(str(2)&str(3)&str(4));
                 command_array(cmd_no).id <= string2_to_integer(str(6)&str(7));
@@ -167,12 +166,13 @@ begin
                 end if;
                 command_array(cmd_no).option <= character_to_integer(str(33));
                 end if;            
-	end loop;	
-	file_close(in_file);   
-	end if;
-	end if;
+	       end loop;	
+	       file_close(in_file);   
+	   end if;
+	  end if;
 	end process;
-               
+    
+    -- Make trigger signal to STATE_CONTROLLOR           
     process(CLK)
     begin
        if(CLK'event and CLK = '1') then
@@ -188,7 +188,8 @@ begin
            end if;
         end if;
      end process;
-      
+    
+    -- Command ALT
     process(CLK)
     begin
        if(CLK'event and CLK = '1') then
@@ -205,7 +206,8 @@ begin
        end if;
      end if;
    end process;
-      
+     
+     -- Next command 
      process(CLK) 
      begin
         if(CLK'event and CLK = '1') then  
@@ -276,13 +278,12 @@ begin
                                    else
                                         cmd_read_no <= cmd_read_no + 1;
                                    end if;   
-                  end case;
-                                                                    
+                  end case;                                                       
             end if;
          end if;
       end process;
           
-          
+   -- Output Text    
    process(CLK) 
      begin
        if(CLK'event and CLK = '1') then  
@@ -304,9 +305,10 @@ begin
           
     ID <= command_array(cmd_read_no).id;
     NEXT_RDY <= next_rdy_function(rdy_array);
-    PARSER_OK <= '1' when fail_sig else '0';
-    END_FAIL <= '1' when parser_ok_sig else '0';
-              
+    PARSER_OK <= '1' when parser_ok_sig else '0';
+    END_FAIL <= '1' when fail_sig else '0';
+  
+  -- Parser result            
   process(CLK)
      variable buf_out : LINE ;
      variable end_sig : boolean := true;
