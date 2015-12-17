@@ -13,138 +13,124 @@ entity TEXT_INPUT_VHDL is
 end TEXT_INPUT_VHDL;
 
 architecture Behavioral of TEXT_INPUT_VHDL is
-
-      signal str : string(1 to 100) := (others => ' ');
+	signal string_line_no : natural := 1;
+	--signal char_no : natural := 1;
+	--signal text_in_reg : character := ' ' ;
+	--signal count_out_reg : integer := 1;
+	--file in_file : text;
+	constant STRING_WIDTH : integer := 50;
+	constant LINE_NUMBER : integer := 15;
+	type string_array is array(1 to LINE_NUMBER) of string(1 to STRING_WIDTH);
+	signal res_string_array : string_array := (others => (others => ' '));
+    signal str_line_no_var,char_no_var : integer := 1;
+    signal next_sig:         boolean := false;
 
 begin
-	process (CLK)
+
+	process(READ_TRG)
        file text_input : text is in "C:\FPGAPrj\CONTROLLOR\text_input.txt";
        variable l:         line;
-       variable c,c_read:         character;
+       variable c:         character;
        variable is_string: boolean;
-       --variable str : string(1 to 100) := (others => ' ');	 
-       variable next_sig : std_logic := '0';
-       variable j,n:         natural := 1;
-       variable end_sig : boolean := false;
-    begin
-	if(CLK'event and CLK = '1') then
-      if not end_sig then	
-                    --if(TRG = '1' or RDY = '1') then
-                    if(READ_TRG = '1' or next_sig = '1') then
-                  readline(text_input, l);
-                        j := 1;
-                        for i in str'range loop
-                            str(i) <= ' ';
-                       end loop;  
-                          for i in str'range loop
-                        read(l, c, is_string);
+		 variable j,n:         natural := 1;
+
+		 
+		--type string_array is array(1 to LINE_NUMBER) of string(1 to STRING_WIDTH);
+	    --variable text_string_array : string_array := (others => (others => ' '));
+       
+   begin
+	
+	--wait until (TRG = '1') ;
+	--file_open(in_file, "text_input.txt",  read_mode);
+      
+    if(READ_TRG'event and READ_TRG = '1') then 	  
+			  
+	--if (READ_TRG = '1') then
+     while not endfile(text_input) loop		
+     readline(text_input, l);
+	  n := 1 ;
+     -- read all characters of the line, up to the length  
+     -- of the results string
+     for i in res_string_array(j)'range loop
+
+    read(l, c, is_string);
                         if is_string then 
                             if(c /= ' ') then
-                            str(j) <= c;
-                            j := j + 1;
+                            --text_string_array(j)(n) := c;
+									 res_string_array(j)(n) <= c;
+                            n := n + 1;
                             end if;
                             --test(i) <= c;
                             --test <= str(256);
                         else 
-                        str(j) <= LF;
+                        --text_string_array(j)(n) := LF;
+								res_string_array(j)(n) <= LF;
                         exit;
                         end if;
-                    
-                    end loop;
-                  
-                  next_sig := '0';
-                  --n := 1;
-                  end if;
-						
-						end if;
-                  --else
-                    --for i in str'range loop
-                        --    str(i) := ' ';
-                       --end loop;
-                    --str(1) := ESC;
-                    --next_sig := '0';
-                  --n := 1;
-						if endfile(text_input) then
-                  end_sig := true;
-                  end if;
-                 -- clear the contents of the result string
-                 --for i in text_string_array(j)'range loop
-                     --text_string_array(j)(i) := ' ';
-                 --end loop;   
-                 -- read all characters of the line, up to the length  
-                 -- of the results string
-                  --wait until CLK = '1'; 
-                  --next_sig := true;
-                  --while next_sig ;
-                 --for i in text_string_array(j)'range loop
-                    --wait until CLK = '1';
-                  --if(next_sig = '1') then
-                    --next_sig <= '0';
-                  --end if;
-                    
-                if((TRG = '1' or RDY = '1')) then
-                --trg_sig <= next_sig or CLK;
-                
-                --if (TRG = '1' or RDY = '1') then
-                 --while(c = ' ') loop
-                 --if (next_sig) then
-                 
-                 --wait until (TRG = '1' or RDY = '1') ;
-                 
-                 --for i in 1 to 100 loop
-                --read(l, c_read, is_string);
-                   --num <= i ;
-                    if(n > 0 and n <100) then
-                    --if(not(c_read = LF and end_sig)) then 
-                    c_read := str(n);
-                    --end if;
-                    n := n + 1;
-                    end if;
-                   --exit when (c_read /= ' ');
-                 --if(c = ' ') then next;
-                 --else
-                 --next_sig := false;
-                 
-                 --end if;
-                 --end loop;
-                 
-                    if(c_read = LF) then
-                        next_sig := '1';
-								n := 1;
-                    end if;
-                 
-                 --n := i ;
-                --if is_string then 
-                    --text_string_array(j)(i) := c;
-                    --res_string_array(j)(i) <= c;
-                    --if(c_read = LF and end_sig) then
-                    --char_out <= ESC;
-                    --else
-                    char_out <= c_read;
-                    --end if;
-                    --str_out_sig(1) := str_out_sig(2);
-                    --str_out_sig(2) := c;
-                    STR_OUT <= STR_OUT(2) & c_read;
-                    --RDY <= '0';
-                    --CONTINUE <= '0';
-                    --next_sig <= '0';
-                --else 
-                 --next_sig <= '1';
-                 --char_out <= LF;
-                 --str_out <= str_out(2)&LF;
-                 --next_sig := '1';
-                --end if;
-               --end if;
-                    
-                    
-                --end if;
-                 --end loop;
-                    
-                    --if(j < LINE_NUMBER) then
-                    --j := j+1;
-                    end if;
-	end if;
+   
+     end loop;
+		
+		if(j < LINE_NUMBER) then
+		j := j+1;
+		end if;
+		end loop;
+		
+	   --text_string_array(j-1)(n) := ESC;
+		res_string_array(j-1)(n) <= ESC;
+		
+	--end if;
+		--if(text_string_array(1)(1) = ' ') then
+		
+		--while COUNT_IN < 30 loop
+		--wait until CLK = '1' ;
+		
+    end if;
+  end process;
+  
+  process(CLK)
+  variable c_read : character := ' ';
+ begin
+    if(CLK'event and CLK = '1') then	
+		if (TRG = '1' or RDY = '1') then
+				if(char_no_var > 0 and char_no_var < STRING_WIDTH) then
+				c_read := res_string_array(str_line_no_var)(char_no_var);
+				--c_read := res_string_array(str_line_no_var)(char_no_var);
+				--char_no_var <= char_no_var + 1;
+				end if;
+				
+				if(c_read = LF) then
+				next_sig <= true;
+				char_no_var <= 1;
+				else
+				next_sig <= false;
+				char_no_var <= char_no_var + 1; 
+				end if;
+				
+				
+				char_out <= c_read;
+                STR_OUT <= STR_OUT(2) & c_read;
+				
+		end if;
+        end if;      
 end process;
+
+
+
+process(CLK)
+    variable accept_sig : boolean := true;
+begin
+    if(CLK'event and CLK = '1') then
+        if(next_sig and accept_sig) then
+          if(str_line_no_var > 0 and str_line_no_var < LINE_NUMBER) then
+            str_line_no_var <= str_line_no_var + 1;
+          end if;
+          accept_sig := false;
+        end if;
+        if(TRG = '1' or RDY = '1') then
+          accept_sig := true;
+        end if;     
+   end if;
+ end process;            
 
 
 end Behavioral;
