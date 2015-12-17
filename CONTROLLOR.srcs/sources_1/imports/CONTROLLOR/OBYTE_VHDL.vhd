@@ -4,16 +4,16 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity OBYTE_VHDL is
 	port(
-		CLK : in std_logic ;
-		TRG_ONE : in std_logic ;
-		TEXT_IN : in character ;
-		NEZ_IN : in character ;
+		CLK : in std_logic := '0';
+		TRG_ONE : in std_logic := '0';
+		TEXT_IN : in character := ' ';
+		NEZ_IN : in character := ' ';
 		RDY_ONE : out std_logic := '0');
 end OBYTE_VHDL;
 
 architecture Behavioral of OBYTE_VHDL is
 
-	signal match_reg : std_logic ;
+	signal match_reg : std_logic := '0' ;
 
 begin
 	

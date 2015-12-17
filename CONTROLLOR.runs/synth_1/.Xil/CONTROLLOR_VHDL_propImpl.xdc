@@ -2,6 +2,6 @@ set_property SRC_FILE_INFO {cfile:C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/const
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L16 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN M14 [get_ports {PARSER_ERROR}]
+set_property PACKAGE_PIN M14 [get_ports PARSER_ERROR]
 set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN M15 [get_ports {PARSER_OK}]
+set_property PACKAGE_PIN M15 [get_ports PARSER_OK]

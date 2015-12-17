@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity BYTE_VHDL is
 	port(
-		CLK : in std_logic ;
-		TRG_ONE : in std_logic ;
+		CLK : in std_logic := '0';
+		TRG_ONE : in std_logic := '0';
 		TEXT_IN : in character := '1';
 		NEZ_IN : in character := 'a';
 		FAIL : out std_logic := '0' ;
@@ -13,7 +13,7 @@ entity BYTE_VHDL is
 end BYTE_VHDL;
 
 architecture Behavioral of BYTE_VHDL is
-	signal match_reg : std_logic ;
+	signal match_reg : std_logic := '0' ;
 	signal fail_reg : std_logic := '0' ;
 	
 begin

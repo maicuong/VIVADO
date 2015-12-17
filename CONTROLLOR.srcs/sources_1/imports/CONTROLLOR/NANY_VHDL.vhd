@@ -4,15 +4,15 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity NANY_VHDL is
 	port(
-		CLK : in std_logic ;
-		TRG_ONE : in std_logic ;
+		CLK : in std_logic := '0';
+		TRG_ONE : in std_logic := '0';
 		TEXT_IN : in character := '1';
 		FAIL : out std_logic := '0' ;
 		RDY_ONE : out std_logic := '0');
 end NANY_VHDL;
 
 architecture Behavioral of NANY_VHDL is
-	signal match_reg : std_logic ;
+	signal match_reg : std_logic := '0' ;
 	signal fail_reg : std_logic := '0' ;
 	
 begin

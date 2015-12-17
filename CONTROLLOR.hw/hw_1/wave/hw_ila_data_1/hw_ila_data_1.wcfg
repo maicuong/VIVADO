@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="7041fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="13" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="start1" type="logic">
+      <obj_property name="ElementShortName">start1</obj_property>
+      <obj_property name="ObjectShortName">start1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="FILE_INPUT/NEXT_RDY" type="logic">
+      <obj_property name="ElementShortName">FILE_INPUT/NEXT_RDY</obj_property>
+      <obj_property name="ObjectShortName">FILE_INPUT/NEXT_RDY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="FILE_INPUT/command_array[1][char_first]" type="array">
+      <obj_property name="ElementShortName">FILE_INPUT/command_array[1][char_first][6:0]</obj_property>
+      <obj_property name="ObjectShortName">FILE_INPUT/command_array[1][char_first][6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="FILE_INPUT/command_array[1][char_second]" type="array">
+      <obj_property name="ElementShortName">FILE_INPUT/command_array[1][char_second][6:0]</obj_property>
+      <obj_property name="ObjectShortName">FILE_INPUT/command_array[1][char_second][6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="FILE_INPUT/command_array[1][option]" type="array">
+      <obj_property name="ElementShortName">FILE_INPUT/command_array[1][option][1:0]</obj_property>
+      <obj_property name="ObjectShortName">FILE_INPUT/command_array[1][option][1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="FILE_INPUT/command_array[1][save]" type="array">
+      <obj_property name="ElementShortName">FILE_INPUT/command_array[1][save][6:0]</obj_property>
+      <obj_property name="ObjectShortName">FILE_INPUT/command_array[1][save][6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="end_fail" type="logic">
+      <obj_property name="ElementShortName">end_fail</obj_property>
+      <obj_property name="ObjectShortName">end_fail</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="fail_reg" type="logic">
+      <obj_property name="ElementShortName">fail_reg</obj_property>
+      <obj_property name="ObjectShortName">fail_reg</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="id_reg" type="array">
+      <obj_property name="ElementShortName">id_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id_reg[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="next_rdy" type="logic">
+      <obj_property name="ElementShortName">next_rdy</obj_property>
+      <obj_property name="ObjectShortName">next_rdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="nosignal_rdy" type="logic">
+      <obj_property name="ElementShortName">nosignal_rdy</obj_property>
+      <obj_property name="ObjectShortName">nosignal_rdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="clk_sig" type="logic">
+      <obj_property name="ElementShortName">clk_sig</obj_property>
+      <obj_property name="ObjectShortName">clk_sig</obj_property>
+   </wvobject>
+</wave_config>

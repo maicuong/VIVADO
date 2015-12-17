@@ -123,16 +123,10 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/constrs_1/imports/CONTROLLOR/json.txt">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/json.txt"/>
-          <Attr Name="ImportTime" Val="1449044461"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../CONTROLLOR/text_input.txt">
-        <FileInfo RelPath="text_input.txt"/>
-      </File>
+      <File Path="$PSRCDIR/constrs_1/new/text.txt"/>
+      <File Path="$PSRCDIR/constrs_1/new/json.txt"/>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/controllor.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

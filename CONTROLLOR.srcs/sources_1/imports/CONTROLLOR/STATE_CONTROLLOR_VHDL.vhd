@@ -4,9 +4,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity STATE_CONTROLLOR_VHDL is
 	port (
-		CLK : in std_logic;
-		ID : in integer;
-		RDY_IN : in std_logic ;
+		CLK : in std_logic := '0';
+		ID : in integer := 0;
+		RDY_IN : in std_logic := '0';
 		BYTE_TRG : out std_logic := '0';
 		SET_TRG : out std_logic := '0';
 		RSET_TRG : out std_logic := '0';
@@ -18,7 +18,7 @@ entity STATE_CONTROLLOR_VHDL is
 end STATE_CONTROLLOR_VHDL;
 
 architecture Behavioral of STATE_CONTROLLOR_VHDL is
-	signal trg_array : std_logic_vector(0 to 20);
+	signal trg_array : std_logic_vector(0 to 20) := (others => '0');
 	
 begin
 	process(CLK)

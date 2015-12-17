@@ -5,11 +5,12 @@ use STD.textio.all;
 entity FILE_INPUT_VHDL is
         port(
         CLK : in std_logic := '0';
+        READ_TRG : in std_logic := '0';
         TRG : in std_logic := '0';
         RDY_IN : in std_logic := '0';
         FAIL : in std_logic := '0' ;
         TEXT_IN : in character := ' ';
-        ID : out integer;
+        ID : out integer := 0;
         BYTE_TEXT : out character := ' ' ;
         SET_TEXT_START : out character := ' ' ;
         SET_TEXT_SECOND : out character := ' ' ;
@@ -41,6 +42,10 @@ architecture behave of FILE_INPUT_VHDL is
    signal alt_stack : int_alt_array := (others => 0) ;
    type int_call_array is array(1 to 30) of integer;
    signal call_stack : int_call_array := (others => 0);
+   
+   --attribute mark_debug : string;
+   --attribute mark_debug of id : signal is "true";
+   --attribute mark_debug of NEXT_RDY : signal is "true";
   
   --convert character to integer
   function character_to_integer(char:character) return integer is
@@ -106,16 +111,16 @@ architecture behave of FILE_INPUT_VHDL is
 	
 begin
   process(CLK)
-     file in_file : text is in "C:\FPGAPrj\CONTROLLOR\json.txt";
+     file in_file : text is in "C:\FPGAPrj\VIVADO\VIVADO\CONTROLLOR.srcs\constrs_1\new\json.txt";
 	 variable l:         line;
-     variable c:         character;
-     variable is_string: boolean;
+     variable c:         character := ' ';
+     variable is_string: boolean := false;
 	 variable cmd_no:         natural := 1;
 	 variable str : string(1 to 100) := (others => ' ');  
 	 
   begin 
 	if(CLK'event and CLK = '1') then
-	   if(TRG = '1') then
+	   if(READ_TRG = '1') then
 	   --Loading command from text file
 	       while not endfile(in_file) loop
 		      readline(in_file, l);

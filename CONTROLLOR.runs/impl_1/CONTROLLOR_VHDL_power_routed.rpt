@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date             : Tue Dec 15 12:22:22 2015
+| Date             : Thu Dec 17 19:13:48 2015
 | Host             : maicuong running 64-bit major release  (build 9200)
 | Command          : report_power -file CONTROLLOR_VHDL_power_routed.rpt -pb CONTROLLOR_VHDL_power_summary_routed.pb
 | Design           : CONTROLLOR_VHDL
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.115  |
-| Dynamic (W)              | 0.012  |
+| Total On-Chip Power (W)  | 0.108  |
+| Dynamic (W)              | 0.005  |
 | Device Static (W)        | 0.103  |
 | Effective TJA (C/W)      | 11.5   |
-| Max Ambient (C)          | 83.7   |
-| Junction Temperature (C) | 26.3   |
+| Max Ambient (C)          | 83.8   |
+| Junction Temperature (C) | 26.2   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,17 +49,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.005 |        3 |       --- |             --- |
-| Slice Logic    |     0.003 |     3021 |       --- |             --- |
-|   LUT as Logic |     0.002 |     1246 |     17600 |            7.08 |
-|   Register     |    <0.001 |     1316 |     35200 |            3.74 |
-|   CARRY4       |    <0.001 |       77 |      4400 |            1.75 |
-|   F7/F8 Muxes  |    <0.001 |       98 |     17600 |            0.56 |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |     2272 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1076 |     17600 |            6.11 |
+|   CARRY4       |    <0.001 |       99 |      4400 |            2.25 |
+|   Register     |    <0.001 |      850 |     35200 |            2.41 |
+|   F7/F8 Muxes  |    <0.001 |       37 |     17600 |            0.21 |
 |   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |     0.004 |     2630 |       --- |             --- |
+| Signals        |     0.001 |     1956 |       --- |             --- |
 | I/O            |    <0.001 |        3 |       100 |            3.00 |
 | Static Power   |     0.103 |          |           |                 |
-| Total          |     0.115 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.012 |      0.004 |
+| Vccint    |       1.000 |     0.008 |       0.005 |      0.004 |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -145,7 +145,7 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| CONTROLLOR_VHDL    |     0.012 |
+| CONTROLLOR_VHDL    |     0.005 |
 |   BYTE             |    <0.001 |
 |   FILE_INPUT       |     0.004 |
 |   NANY             |    <0.001 |
@@ -154,7 +154,7 @@ Table of Contents
 |   SET              |    <0.001 |
 |   STATE_CONTROLLOR |    <0.001 |
 |   STR              |    <0.001 |
-|   TEXT_INPUT       |     0.006 |
+|   TEXT_INPUT       |    <0.001 |
 +--------------------+-----------+
 
 

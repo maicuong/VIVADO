@@ -4,7 +4,7 @@ use STD.textio.all;
 
 entity CONTROLLOR_VHDL is
 	port (
-	CLK : in std_logic;
+	CLK : in std_logic := '0';
 	PARSER_OK : out std_logic := '0';
 	PARSER_ERROR : out std_logic := '0');
 end CONTROLLOR_VHDL;
@@ -17,6 +17,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	component FILE_INPUT_VHDL 
 		port(
 		CLK : in std_logic;
+		READ_TRG : in std_logic := '0';
 		TRG : in std_logic ;
 		RDY_IN : in std_logic ;
 		FAIL : in std_logic ;
@@ -38,6 +39,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	component TEXT_INPUT_VHDL 
 	   port(
 		CLK : in std_logic ;
+	    READ_TRG : in std_logic ;
 		TRG : in std_logic ;
 		RDY : in std_logic ;
 		CHAR_OUT : out character ;
@@ -146,10 +148,10 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal count_start : integer := 0;
 
 	constant ARRAY_WIDTH : natural := 20 ;
-	signal byte_text_reg : character ;
-	signal set_text_start_sig, set_text_end_sig : character;
-	signal set_option_sig : integer ;	
-	signal obyte_text_reg : character;
+	signal byte_text_reg : character := ' ' ;
+	signal set_text_start_sig, set_text_end_sig : character := ' ';
+	signal set_option_sig : integer := 0;	
+	signal obyte_text_reg : character := ' ';
 
 	signal text_in_reg : character := ' ' ;
 	signal next_rdy_array : std_logic_vector(ARRAY_WIDTH downto 0) := (others => '0') ;
@@ -162,7 +164,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal continue_sig : std_logic := '0' ;
 	signal next_trg : std_logic := '0' ;
 	signal next_text_rdy_reg : std_logic := '0' ;	
-	signal start : std_logic := '0' ;
+	signal start,start1,start2 : std_logic := '0' ;
 		
 	--next_rdy_function
 	function next_rdy_function(n:std_logic_vector) return std_logic is
@@ -176,24 +178,40 @@ architecture Behavioral of CONTROLLOR_VHDL is
 			return rdy;
 	end next_rdy_function;
 	
-	
 	signal end_fail : std_logic := '0' ;
 	signal end_parser_ok : std_logic := '0' ;
 	signal string_text_reg, string_nez_reg : string(1 to 2) := "  ";
 	signal state_next : std_logic := '0';
+	--signal clk_sig : std_logic := '0';
 	
-					
+	--attribute mark_debug : string;
+    --attribute mark_debug of end_parser_ok: signal is "true";
+	--attribute mark_debug of end_fail : signal is "true";
+	--attribute mark_debug of next_rdy : signal is "true";
+	--attribute mark_debug of fail_reg : signal is "true";
+	--attribute mark_debug of nosignal_rdy : signal is "true";
+	--attribute mark_debug of continue_sig : signal is "true";
+	--attribute mark_debug of next_trg : signal is "true";
+	--attribute mark_debug of next_text_rdy_reg : signal is "true";
+	--attribute mark_debug of id_reg : signal is "true";
+	--attribute mark_debug of CLK_sig : signal is "true";
+	--attribute mark_debug of start : signal is "true";	
+    --attribute mark_debug of start1 : signal is "true";	
+
 begin
 	next_rdy <= (next_rdy_function(next_rdy_array));
 	fail_reg <= next_rdy_function(fail_reg_array) ;
 	next_text_rdy_reg <= next_rdy_array(1) or next_rdy_array(3) or continue_sig;
 	state_next <= nosignal_rdy or continue_sig;
 	PARSER_OK <= end_parser_ok;
+	--PARSER_OK <= start2;
 	PARSER_ERROR <= end_fail;
+	--clk_sig <= CLK;
 
 	FILE_INPUT : FILE_INPUT_VHDL
 	port map(	
 	    CLK => CLK,
+	    READ_TRG => start1,
 	    TRG => START,
 		RDY_IN => next_rdy,
 		FAIL => fail_reg,
@@ -211,6 +229,7 @@ begin
 	TEXT_INPUT : TEXT_INPUT_VHDL
 	port map(
 		CLK => CLK,
+		READ_TRG => start1,
 		TRG => START,
 		RDY => next_text_rdy_reg,
 		CHAR_OUT => text_in_reg,
@@ -231,7 +250,7 @@ begin
 		OTHERS_TRG => next_rdy_array(0));
 
 	BYTE : BYTE_VHDL port map (
-		CLK => CLK ,
+		CLK => CLK,
 		TRG_ONE => trg_reg_array(1),
 		TEXT_IN => text_in_reg,
 		NEZ_IN => byte_text_reg,
@@ -284,13 +303,18 @@ begin
 	process(CLK)
 	begin
 	   if(CLK'event and CLK = '0') then	       
-	       if(count_start < 4) then
+	       if(count_start < 8) then
 	       count_start <= count_start + 1;
 	       end if;
 	       
 	       if(count_start = 2) then
-	           start <= '1';
-	       else	       
+	           start1 <= '1';
+	       elsif(count_start = 4) then
+	           start <= '1' ;
+	       elsif(count_start = 6) then
+	           start2 <= '1';
+	       else
+	           start1 <= '0';	       
 	           start <= '0';
 	       end if;
            

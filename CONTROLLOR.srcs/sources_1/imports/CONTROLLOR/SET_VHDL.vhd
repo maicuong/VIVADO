@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity SET_VHDL is
 	port(
-		CLK : in std_logic ;
-		TRG_ONE : in std_logic ;
+		CLK : in std_logic := '0';
+		TRG_ONE : in std_logic := '0';
 		NEZ_IN_START : in character := '0';
 		NEZ_IN_END : in character := '9';
 		OPTION : in integer := 2;
@@ -16,8 +16,8 @@ end SET_VHDL;
 
 architecture Behavioral of SET_VHDL is
 
-	signal match_reg : std_logic ;
-	signal fail_reg : std_logic ;
+	signal match_reg : std_logic := '0' ;
+	signal fail_reg : std_logic := '0';
 	
 begin
 	process (CLK)
