@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
 
 entity SET_VHDL is
 	port(
@@ -9,7 +10,7 @@ entity SET_VHDL is
 		NEZ_IN_START : in character := '0';
 		NEZ_IN_END : in character := '9';
 		OPTION : in integer := 2;
-		TEXT_IN : in character := '1';
+		TEXT_IN : in std_logic_vector(7 downto 0);
 		FAIL : out std_logic := '0' ;
 		RDY_ONE : out std_logic := '0');
 end SET_VHDL;
@@ -24,8 +25,8 @@ begin
 	begin
 		if(CLK'event and CLK = '1') then
 			if (TRG_ONE = '1') then
-				if(((OPTION = 0 or OPTION = 1) and (TEXT_IN = NEZ_IN_START or TEXT_IN = NEZ_IN_END)) 
-					or((OPTION = 2) and (TEXT_IN >= NEZ_IN_START and TEXT_IN <= NEZ_IN_END))) then
+				if(((OPTION = 0 or OPTION = 1) and (TEXT_IN = std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_START)),8)) or TEXT_IN = std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_END)),8)))) 
+                or((OPTION = 2) and (TEXT_IN >= std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_START)),8)) and TEXT_IN <= std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_END)),8))))) then
 					match_reg <= '1' ;
 				else
 					fail_reg <= '1' ;

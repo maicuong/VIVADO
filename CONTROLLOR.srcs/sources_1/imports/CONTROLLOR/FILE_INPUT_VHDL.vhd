@@ -9,7 +9,7 @@ entity FILE_INPUT_VHDL is
         TRG : in std_logic := '0';
         RDY_IN : in std_logic := '0';
         FAIL : in std_logic := '0' ;
-        TEXT_IN : in character := ' ';
+	    TEXT_IN : in std_logic_vector(7 downto 0);
         ID : out integer := 0;
         BYTE_TEXT : out character := ' ' ;
         SET_TEXT_START : out character := ' ' ;
@@ -120,7 +120,7 @@ begin
 	 
   begin 
 	if(CLK'event and CLK = '1') then
-	   if(READ_TRG = '1') then
+	   if(TRG = '1') then
 	   --Loading command from text file
 	       while not endfile(in_file) loop
 		      readline(in_file, l);
@@ -228,47 +228,47 @@ begin
                               end if;
                               call_top <= call_top + 1;                                                                     
                     when 12 => if(cmd_read_no = 7) then
-                                  case text_in is
-                                       when 't' => cmd_read_no <= 81;
-                                       when 'f' => cmd_read_no <= 70;
-                                       when '{' => cmd_read_no <= 86;
-                                       when '"' => cmd_read_no <= 9;
-                                       when '[' => cmd_read_no <= 58;
-                                       when 'n' => cmd_read_no <= 76;   
-                                       when 'O' => cmd_read_no <= 86;
-                                       when others => if(text_in >= '0' and text_in <= '9') then
-                                                         cmd_read_no <= 11;
-                                                      else 
-                                                          cmd_read_no <= 8;
-                                                       end if;
-                                   end case;
-                                 elsif (cmd_read_no = 12) then
-                                      case text_in is
-                                           when '4' => cmd_read_no <= 33;
-                                           when '5' => cmd_read_no <= 35;
-                                           when '6' => cmd_read_no <= 37;
-                                           when '7' => cmd_read_no <= 39;
-                                           when '8' => cmd_read_no <= 41;
-                                           when '1' => cmd_read_no <= 27;   
-                                           when '9' => cmd_read_no <= 43;
-                                           when '0' => cmd_read_no <= 13;
-                                           when '2' => cmd_read_no <= 29;   
-                                           when '3' => cmd_read_no <= 31;
-                                           when others => cmd_read_no <= 8;
-                                       end case;
-                                   elsif (cmd_read_no = 14) then
-                                        case text_in is
-                                            when '.' => cmd_read_no <= 16;   
-                                            when EOT => cmd_read_no <= 8;
-                                            when others => cmd_read_no <= 15; 
-                                        end case;
-                                    elsif(cmd_read_no = 101) then
-                                         case text_in is
-                                             when '"' => cmd_read_no <= 8;
-                                             when '/' => cmd_read_no <= 104;
-                                             when others => cmd_read_no <= 102;
-                                         end case;
-                                     end if;        
+                                            case text_in is
+                                                 when "01110100" => cmd_read_no <= 81; --t
+                                                 when "01100110" => cmd_read_no <= 70; --f
+                                                 when "01111011" => cmd_read_no <= 86;
+                                                 when "00100010" => cmd_read_no <= 9;
+                                                 when "01011011" => cmd_read_no <= 58;
+                                                 when "01101110" => cmd_read_no <= 76;   
+                                                 when "01001111" => cmd_read_no <= 86;
+                                                 when others => if(text_in >= "00110000" and text_in <= "00111001") then
+                                                                   cmd_read_no <= 11;
+                                                                else 
+                                                                    cmd_read_no <= 8;
+                                                                 end if;
+                                             end case;
+                                           elsif (cmd_read_no = 12) then
+                                                case text_in is
+                                                     when "00110100" => cmd_read_no <= 33;
+                                                     when "00110101" => cmd_read_no <= 35;
+                                                     when "00110110" => cmd_read_no <= 37;
+                                                     when "00110111" => cmd_read_no <= 39;
+                                                     when "00111000" => cmd_read_no <= 41;
+                                                     when "00110001" => cmd_read_no <= 27;   
+                                                     when "00111001" => cmd_read_no <= 43;
+                                                     when "00110000" => cmd_read_no <= 13;
+                                                     when "00110010" => cmd_read_no <= 29;   
+                                                     when "00110011" => cmd_read_no <= 31;
+                                                     when others => cmd_read_no <= 8;
+                                                 end case;
+                                             elsif (cmd_read_no = 14) then
+                                                  case text_in is
+                                                      when "00101110" => cmd_read_no <= 16;   
+                                                      when "00000100" => cmd_read_no <= 8;
+                                                      when others => cmd_read_no <= 15; 
+                                                  end case;
+                                              elsif(cmd_read_no = 101) then
+                                                   case text_in is
+                                                       when "00100010" => cmd_read_no <= 8;
+                                                       when "00101111" => cmd_read_no <= 104;
+                                                       when others => cmd_read_no <= 102;
+                                                   end case;
+                                               end if;         
                                                                                     
                         when 15 => if(call_stack(1) = 0) then 
                                        parser_ok_sig <= true;

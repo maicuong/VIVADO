@@ -6,7 +6,7 @@ entity NANY_VHDL is
 	port(
 		CLK : in std_logic := '0';
 		TRG_ONE : in std_logic := '0';
-		TEXT_IN : in character := '1';
+		TEXT_IN : in std_logic_vector(7 downto 0);
 		FAIL : out std_logic := '0' ;
 		RDY_ONE : out std_logic := '0');
 end NANY_VHDL;
@@ -20,7 +20,7 @@ begin
 	begin
 		if(CLK'event and CLK = '1') then
 			if (TRG_ONE = '1') then
-				if (TEXT_IN = ESC) then
+				if (TEXT_IN = "00000011") then
 					match_reg <= '1' ;
 				else
 					fail_reg <= '1' ;
