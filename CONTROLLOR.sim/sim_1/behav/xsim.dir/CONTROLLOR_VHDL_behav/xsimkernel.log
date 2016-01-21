@@ -1,7 +1,4 @@
-Running: xsim.dir/CONTROLLOR_VHDL_behav/xsimk.exe -simmode gui -wdb CONTROLLOR_VHDL_behav.wdb -simrunnum 0 -socket 50565
+Running: xsim.dir/CONTROLLOR_VHDL_behav/xsimk.exe -simmode gui -wdb CONTROLLOR_VHDL_behav.wdb -simrunnum 0 -socket 52697
 Design successfully loaded
-Design Loading Memory Usage: 17812 KB (Peak: 17812 KB)
-Design Loading CPU Usage: 108 ms
-Simulation completed
-Simulation Memory Usage: 18936 KB (Peak: 18936 KB)
-Simulation CPU Usage: 124 ms
+Design Loading Memory Usage: 17652 KB (Peak: 17652 KB)
+Design Loading CPU Usage: 124 ms

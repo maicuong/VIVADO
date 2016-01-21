@@ -1,3 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/MEMORY_VHDL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MEMORY_VHDL
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity TEXT_INPUT_VHDL
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/FPGAPrj/VIVADO/VIVADO/CONTROLLOR.srcs/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd" into library xil_defaultlib

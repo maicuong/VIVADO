@@ -43,6 +43,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		TRG : in std_logic ;
 		RDY : in std_logic ;
 		TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
+	    COUNT_TEXT_STREAM : in natural;
 		RUN : out std_logic := '0';
 		CHAR_OUT : out std_logic_vector(7 downto 0)) ;
 		--STR_OUT : buffer string(1 to 2));
@@ -171,8 +172,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	--Test
     signal text_input_stream : std_logic_vector(7 downto 0);
     signal count_text_stream : natural := 1;
-    type text_sample is array(1 to 8) of std_logic_vector(7 downto 0); 
-    signal txt_sample : text_sample := ("01111011","00100010","01000001","00100010","00111010","00111001","01111101","00000011");
+    type text_sample is array(1 to 12) of std_logic_vector(7 downto 0); 
+    signal txt_sample : text_sample := ("01111011","00100010","01000001","00100010","00111010","00111001","01111101","00000011","00000000","00000000","00000000","00000000");
     ------
 		
 	--next_rdy_function
@@ -192,6 +193,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal string_text_reg, string_nez_reg : string(1 to 2) := "  ";
 	signal state_next : std_logic := '0';
 	--signal clk_sig : std_logic := '0';
+	signal fin : boolean := false;
 	
 	--attribute mark_debug : string;
     --attribute mark_debug of end_parser_ok: signal is "true";
@@ -242,6 +244,7 @@ begin
 		TRG => START,
 		RDY => next_text_rdy_reg,
 		TEXT_INPUT_STREAM => text_input_stream,
+		COUNT_TEXT_STREAM => count_text_stream,
 		RUN => start,
 		CHAR_OUT => text_in_reg
 		--STR_OUT => string_text_reg
@@ -336,9 +339,18 @@ begin
 	process(CLK)
     begin
         if(CLK'event and CLK = '1') then
-            if(count_text_stream <= 8) then
+            if(count_text_stream <= 10) then
+                if(not fin) then
                 text_input_stream <= txt_sample(count_text_stream);
+                end if;
                 count_text_stream <= count_text_stream + 1;
+            --else
+                --text_input_stream <= "UUUUUUUU";
+            end if;
+            
+            if(count_text_stream = 11) then
+                count_text_stream <= 1;
+                fin <= true;
             end if;
         end if;
     end process;
