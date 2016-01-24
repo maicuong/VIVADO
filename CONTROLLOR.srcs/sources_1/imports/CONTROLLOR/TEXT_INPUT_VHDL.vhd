@@ -14,7 +14,7 @@ entity TEXT_INPUT_VHDL is
 	TRG : in std_logic ;
 	RDY : in std_logic ;
 	TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
-	COUNT_TEXT_STREAM : in natural;
+	RDEN : in std_logic;
 	RUN : out std_logic := '0';
 	CHAR_OUT : out std_logic_vector(7 downto 0)) ;
 	--STR_OUT : buffer string(1 to 2) );
@@ -30,11 +30,12 @@ architecture Behavioral of TEXT_INPUT_VHDL is
 	--signal in_num, out_num : natural := 1;
 	--signal c,c_read: std_logic_vector(7 downto 0);
 	signal input_end: boolean := false;
+	signal count_text_stream : integer := 0;
 	
 	component MEMORY_VHDL
 	    port (
 		 CLK : in std_logic;
-		DIN : in std_logic_vector(7 downto 0); 
+		 DIN : in std_logic_vector(7 downto 0); 
        DOUT : out std_logic_vector(7 downto 0);
        WR : in std_logic;
        ADDR_IN : in std_logic_vector(8 downto 0));
@@ -137,7 +138,16 @@ begin
 			if(input_finish) then
 				addr_in <= CONV_std_logic_vector(out_num,9);
 			else
-				addr_in <= CONV_std_logic_vector((count_text_stream+1),9);
+				addr_in <= CONV_std_logic_vector((count_text_stream+2),9);
+			end if;
+		end if;
+	end process;
+	
+	process(CLK) 
+	begin
+		if(CLK'event and CLK = '0') then
+			if(RDEN = '1') then
+				count_text_stream <= count_text_stream + 1;
 			end if;
 		end if;
 	end process;

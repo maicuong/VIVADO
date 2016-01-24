@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date             : Thu Jan 21 17:27:11 2016
+| Date             : Sun Jan 24 20:03:02 2016
 | Host             : maicuong running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : CONTROLLOR_VHDL
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |     2119 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1005 |     17600 |            5.71 |
-|   CARRY4       |    <0.001 |       75 |      4400 |            1.70 |
-|   Register     |    <0.001 |      818 |     35200 |            2.32 |
+| Slice Logic    |    <0.001 |     2175 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1027 |     17600 |            5.84 |
+|   CARRY4       |    <0.001 |       86 |      4400 |            1.95 |
+|   Register     |    <0.001 |      828 |     35200 |            2.35 |
 |   F7/F8 Muxes  |    <0.001 |       25 |     17600 |            0.14 |
 |   Others       |     0.000 |       22 |       --- |             --- |
-| Signals        |    <0.001 |     1882 |       --- |             --- |
+| Signals        |    <0.001 |     1899 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        60 |            0.83 |
 | I/O            |    <0.001 |        3 |       100 |            3.00 |
 | Static Power   |     0.103 |          |           |                 |

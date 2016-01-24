@@ -37,50 +37,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/TEXT_INPUT_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1447987541"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/FILE_INPUT_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1447986245"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/NANY_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1448519493"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/STR_VHDL.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/STR_VHDL.vhd"/>
           <Attr Name="ImportTime" Val="1448513785"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/OBYTE_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1448440768"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/SET_VHDL.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/SET_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1447995000"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -93,10 +53,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/SET_VHDL.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/BYTE_VHDL.vhd"/>
-          <Attr Name="ImportTime" Val="1447741028"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/SET_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1447995000"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -105,6 +65,46 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/RSET_VHDL.vhd"/>
           <Attr Name="ImportTime" Val="1447837904"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/OBYTE_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/OBYTE_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1448440768"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/NANY_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/NANY_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1448519493"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/FILE_INPUT_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/FILE_INPUT_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1447986245"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/BYTE_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/BYTE_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1447741028"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/CONTROLLOR/TEXT_INPUT_VHDL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../CONTROLLOR/TEXT_INPUT_VHDL.vhd"/>
+          <Attr Name="ImportTime" Val="1447987541"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -145,6 +145,7 @@
         <Option Name="TopModule" Val="CONTROLLOR_VHDL"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
