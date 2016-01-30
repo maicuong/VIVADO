@@ -7,8 +7,8 @@ entity SET_VHDL is
 	port(
 		CLK : in std_logic := '0';
 		TRG_ONE : in std_logic := '0';
-		NEZ_IN_START : in character := '0';
-		NEZ_IN_END : in character := '9';
+		NEZ_IN_START : in std_logic_vector(7 downto 0);
+		NEZ_IN_END : in std_logic_vector(7 downto 0);
 		OPTION : in integer := 2;
 		TEXT_IN : in std_logic_vector(7 downto 0);
 		FAIL : out std_logic := '0' ;
@@ -25,8 +25,8 @@ begin
 	begin
 		if(CLK'event and CLK = '1') then
 			if (TRG_ONE = '1') then
-				if(((OPTION = 0 or OPTION = 1) and (TEXT_IN = std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_START)),8)) or TEXT_IN = std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_END)),8)))) 
-                or((OPTION = 2) and (TEXT_IN >= std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_START)),8)) and TEXT_IN <= std_logic_vector(to_unsigned(natural(character'pos(NEZ_IN_END)),8))))) then
+				if(((OPTION = 0 or OPTION = 1) and (TEXT_IN = NEZ_IN_START or TEXT_IN = NEZ_IN_END)) 
+                or((OPTION = 2) and (TEXT_IN >= NEZ_IN_START and TEXT_IN <= NEZ_IN_END))) then
 					match_reg <= '1' ;
 				else
 					fail_reg <= '1' ;

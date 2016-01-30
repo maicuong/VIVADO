@@ -5,12 +5,18 @@ use STD.textio.all;
 entity CONTROLLOR_VHDL is
 	port (
 	CLK : in std_logic := '0';
-	PARSER_OK : out std_logic := '0';
-	PARSER_ERROR : out std_logic := '0');
+	--INPUT_STREAM : in std_logic_vector(7 downto 0);
+	--RDEN : in std_logic;
+	PARSER_OK : out std_logic := '0');
+	--PARSER_ERROR : out std_logic := '0');
 end CONTROLLOR_VHDL;
 
 architecture Behavioral of CONTROLLOR_VHDL is
 
+    signal parser_error : std_logic;
+    signal input_stream :  std_logic_vector(7 downto 0);
+    signal rden : std_logic;
+    
     -----------------------------------------
     -- Loading command
     -----------------------------------------
@@ -18,14 +24,16 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		port(
 		CLK : in std_logic;
 		READ_TRG : in std_logic := '0';
+		CONTINUE : in std_logic;
 		TRG : in std_logic ;
 		RDY_IN : in std_logic ;
 		FAIL : in std_logic ;
 		TEXT_IN : in std_logic_vector(7 downto 0);
+	    TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
 		ID : out integer;
-		BYTE_TEXT : out character ;
-		SET_TEXT_START : out character ;
-	    SET_TEXT_SECOND : out character ;
+		BYTE_TEXT : out std_logic_vector(7 downto 0) ;
+		SET_TEXT_START : out std_logic_vector(7 downto 0) ;
+	    SET_TEXT_SECOND : out std_logic_vector(7 downto 0);
 	    SET_OPTION : out integer ;
 		STR_TEXT : out string(1 to 2);
 		END_FAIL : buffer std_logic ;
@@ -75,7 +83,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		CLK : in std_logic ;
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in std_logic_vector(7 downto 0) ;
-		NEZ_IN : in character ;
+		NEZ_IN : in std_logic_vector(7 downto 0) ;
 		FAIL : out std_logic ;
 		RDY_ONE : out std_logic);
 	end component;
@@ -87,8 +95,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		port(
 		CLK : in std_logic ;
 		TRG_ONE : in std_logic ;
-		NEZ_IN_START : in character ;
-		NEZ_IN_END : in character ;
+		NEZ_IN_START : in std_logic_vector(7 downto 0) ;
+		NEZ_IN_END : in std_logic_vector(7 downto 0) ;
 		OPTION : in integer ;
 		TEXT_IN : in std_logic_vector(7 downto 0) ;
 		FAIL : out std_logic ;
@@ -103,8 +111,8 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		CLK : in std_logic ;
 		--R : in std_logic ;
 		TRG_ONE : in std_logic ;
-		NEZ_IN_START : in character := 'a';
-		NEZ_IN_END : in character := 'z';
+		NEZ_IN_START : in std_logic_vector(7 downto 0);
+		NEZ_IN_END : in std_logic_vector(7 downto 0);
 		OPTION : in integer ;
 		TEXT_IN : in std_logic_vector(7 downto 0) ;
 		CONTINUE_RDY : out std_logic ;
@@ -119,7 +127,7 @@ architecture Behavioral of CONTROLLOR_VHDL is
 		CLK : in std_logic ;
 		TRG_ONE : in std_logic ;
 		TEXT_IN : in std_logic_vector(7 downto 0) ;
-		NEZ_IN : in character := 'a';
+		NEZ_IN : in std_logic_vector(7 downto 0);
 		RDY_ONE : out std_logic := '0');
 	end component;
 	
@@ -151,10 +159,10 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal count_start : integer := 0;
 
 	constant ARRAY_WIDTH : natural := 20 ;
-	signal byte_text_reg : character := ' ' ;
-	signal set_text_start_sig, set_text_end_sig : character := ' ';
+	signal byte_text_reg : std_logic_vector(7 downto 0) := "00000000" ;
+	signal set_text_start_sig, set_text_end_sig : std_logic_vector(7 downto 0) := "00000000";
 	signal set_option_sig : integer := 0;	
-	signal obyte_text_reg : character := ' ';
+	signal obyte_text_reg : std_logic_vector(7 downto 0) := "00000000";
 
 	signal text_in_reg : std_logic_vector(7 downto 0) ;
 	signal next_rdy_array : std_logic_vector(ARRAY_WIDTH downto 0) := (others => '0') ;
@@ -170,10 +178,10 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal start,start1,start2 : std_logic := '0' ;
 	
 	--Test
-    signal text_input_stream : std_logic_vector(7 downto 0);
-    signal count_text_stream : integer := 0;
-    type text_sample is array(1 to 9) of std_logic_vector(7 downto 0); 
-    signal txt_sample : text_sample := ("01111011","00100010","01000001","00100010","00111010","00111001","01111101","00000011","00000000");
+    --signal text_input_stream : std_logic_vector(7 downto 0);
+    signal count_text_stream : integer := 1;
+    type text_sample is array(1 to 18) of std_logic_vector(7 downto 0); 
+    signal txt_sample : text_sample := ("01111011","00100010","01000001","00100010","00111010","00111001","00111000","00101100","00001010","00100010","01000001","00100010","00111010","00111001","00111000","01111101","00101111","00000000");
     ------
 		
 	--next_rdy_function
@@ -194,7 +202,9 @@ architecture Behavioral of CONTROLLOR_VHDL is
 	signal state_next : std_logic := '0';
 	--signal clk_sig : std_logic := '0';
 	signal fin : boolean := false;
-	signal rden : std_logic := '0';
+	--signal rden : std_logic := '0';
+	
+	signal run_start : std_logic := '0';
 	
 	
 	--attribute mark_debug : string;
@@ -215,7 +225,7 @@ begin
 	next_rdy <= (next_rdy_function(next_rdy_array));
 	fail_reg <= next_rdy_function(fail_reg_array) ;
 	next_text_rdy_reg <= next_rdy_array(1) or next_rdy_array(3) or continue_sig;
-	state_next <= nosignal_rdy or continue_sig;
+	state_next <= nosignal_rdy;
 	PARSER_OK <= end_parser_ok;
 	--PARSER_OK <= start2;
 	PARSER_ERROR <= end_fail;
@@ -226,10 +236,12 @@ begin
 	    CLK => CLK,
 	    READ_TRG => start1,
 	    TRG => START,
+	    CONTINUE => continue_sig,
 		RDY_IN => next_rdy,
 		FAIL => fail_reg,
 		ID => id_reg,
 		TEXT_IN => text_in_reg,
+	    TEXT_INPUT_STREAM => INPUT_STREAM,
 		BYTE_TEXT => byte_text_reg,
 		SET_TEXT_START => set_text_start_sig,
 	    SET_TEXT_SECOND => set_text_end_sig,
@@ -245,9 +257,9 @@ begin
 		READ_TRG => start1,
 		TRG => START,
 		RDY => next_text_rdy_reg,
-		TEXT_INPUT_STREAM => text_input_stream,
+		TEXT_INPUT_STREAM => input_stream,
 		RDEN => rden,
-		RUN => start,
+		RUN => run_start,
 		CHAR_OUT => text_in_reg
 		--STR_OUT => string_text_reg
 		);
@@ -317,12 +329,12 @@ begin
 		FAIL => fail_reg_array(16),
 		RDY_ONE => next_rdy_array(16));
 
-	process(CLK)
-	begin
-	   if(CLK'event and CLK = '0') then	       
-	       if(count_start < 8) then
-	       count_start <= count_start + 1;
-	       end if;
+	--process(CLK)
+	--begin
+	   --if(CLK'event and CLK = '0') then	       
+	       --if(count_start < 8) then
+	       --count_start <= count_start + 1;
+	       --end if;
 	       
 	       --if(count_start = 2) then
 	           --start1 <= '1';
@@ -335,46 +347,84 @@ begin
 	           --start <= '0';
 	       --end if;
            
-		end if;
-	end process;
+		--end if;
+	--end process;
 	
 	process(CLK)
     begin
-        if(CLK'event and CLK = '1') then
-            if(count_text_stream >= 1 and count_text_stream <= 8) then
+        if(CLK'event and CLK = '0') then
+            if(count_text_stream >= 1 and count_text_stream <= 17) then
                 --if(not fin) then
-                text_input_stream <= txt_sample(count_text_stream);
+                input_stream <= txt_sample(count_text_stream);
+                rden <= '1';
+                count_text_stream <= count_text_stream + 1;
                 --end if;
                 --count_text_stream <= count_text_stream + 1;
-            --else
+            else
+                rden <= '0';
                 --text_input_stream <= "UUUUUUUU";
-            end if;
+            --end if;
             
             --if(count_text_stream = 9) then
                 --count_text_stream <= 1;
                 --fin <= true;
-            --end if;
+            end if;
         end if;
     end process;
     
-    process(CLK)
-    begin
-        if(CLK'event and CLK = '0') then
-            if(count_text_stream <= 8) then
-                count_text_stream <= count_text_stream + 1;
-            end if;
-        end if;
-    end process;
+    --process(CLK)
+    --begin
+        --if(CLK'event and CLK = '0') then
+            --if(count_text_stream <= 8) then
+                --count_text_stream <= count_text_stream + 1;
+            --end if;
+        --end if;
+    --end process;
 	 
+    --process(CLK)
+    --begin
+        --if(CLK'event and CLK = '0') then
+            --if(count_text_stream <= 8) then
+                --rden <= '1';
+				--else 
+					--rden <= '0';
+            --end if;
+        --end if;
+    --end process;
+    
+    --process(CLK)
+    --begin
+        --if(CLK'event and CLK = '1') then
+            --if(input_stream = "01000000") then
+               --parser_ok <= '0' ;
+            --elsif(end_parser_ok = '1') then
+                --parser_ok <= '1';
+            --end if;
+        --end if;
+    --end process;
+    
     process(CLK)
+        variable n : std_logic := '0';
+        variable c : natural := 1; 
     begin
         if(CLK'event and CLK = '1') then
-            if(count_text_stream <= 8) then
-                rden <= '1';
-				else 
-					rden <= '0';
+          if(input_stream = "01000000") then
+            n := '0';
+            c := 1;
+         else   
+            if(run_start = '1') then
+                n := '1';
             end if;
-        end if;
-    end process;
+            if(n= '1' and c < 10) then
+                c := c + 1;
+            end if;
+            if(c = 7) then
+                start <= '1';
+            else
+                start <= '0';
+            end if;
+          end if;
+         end if;
+     end process;
 
 end Behavioral;

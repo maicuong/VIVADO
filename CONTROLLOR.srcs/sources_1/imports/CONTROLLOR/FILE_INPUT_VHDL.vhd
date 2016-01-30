@@ -1,19 +1,22 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use STD.textio.all;
+use ieee.numeric_std.all;
 
 entity FILE_INPUT_VHDL is
         port(
         CLK : in std_logic := '0';
         READ_TRG : in std_logic := '0';
+        CONTINUE : in std_logic;
         TRG : in std_logic := '0';
         RDY_IN : in std_logic := '0';
         FAIL : in std_logic := '0' ;
 	    TEXT_IN : in std_logic_vector(7 downto 0);
+	    TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
         ID : out integer := 0;
-        BYTE_TEXT : out character := ' ' ;
-        SET_TEXT_START : out character := ' ' ;
-        SET_TEXT_SECOND : out character := ' ' ;
+        BYTE_TEXT : out std_logic_vector(7 downto 0) ;
+        SET_TEXT_START : out std_logic_vector(7 downto 0) ;
+        SET_TEXT_SECOND : out std_logic_vector(7 downto 0) ;
         SET_OPTION : out integer := 0 ;
         STR_TEXT : out string(1 to 2) := "  " ;
         END_FAIL : buffer std_logic := '0' ;
@@ -27,15 +30,15 @@ architecture behave of FILE_INPUT_VHDL is
      id : integer ;
      save : integer;
      next_cmd : integer;
-     char_first : character;
-     char_second : character;
+     char_first : std_logic_vector(7 downto 0);
+     char_second : std_logic_vector(7 downto 0);
      char_first1 : character;
      char_second1 : character;
      option : integer;
    end record;
    type cmd_record_array is array(1 to 125) of cmd_record;
    signal command_array : cmd_record_array := (others => (id => 0, save => 0 , next_cmd => 0,
-                                                          char_first => ' ', char_second => ' ',
+                                                          char_first => "00000000", char_second => "00000000",
                                                                              char_first1 => ' ', char_second1 => ' ', option => 0));
                                                                                                                                            
    type int_alt_array is array(1 to 50) of integer;
@@ -109,6 +112,8 @@ architecture behave of FILE_INPUT_VHDL is
 	signal next_accept : boolean := false;
 	signal alt_top : natural := 1;
 	
+	signal continue_sig : std_logic := '0';
+	
 begin
   process(CLK)
      file in_file : text is in "C:\FPGAPrj\VIVADO\VIVADO\CONTROLLOR.srcs\constrs_1\new\json.txt";
@@ -142,18 +147,18 @@ begin
                 command_array(cmd_no).save <= string3_to_integer(str(9)&str(10)&str(11));
                 command_array(cmd_no).next_cmd <= string3_to_integer(str(13)&str(14)&str(15));
                 if(str(18)&str(19) = "HT") then
-                command_array(cmd_no).char_first <= HT;
+                command_array(cmd_no).char_first <= "00001001";
                 elsif (str(18)&str(19) = "LF") then
-                command_array(cmd_no).char_first <= LF;
+                command_array(cmd_no).char_first <= "00001010";
                 else
-                command_array(cmd_no).char_first <= str(18);
+                command_array(cmd_no).char_first <= std_logic_vector(to_unsigned(natural(character'pos(str(18))),8));
                 end if;
                 if(str(22)&str(23) = "HT") then
-                command_array(cmd_no).char_second <= HT;
+                command_array(cmd_no).char_second <= "00001001";
                 elsif (str(22)&str(23) = "LF") then
-                command_array(cmd_no).char_second <= LF;
+                command_array(cmd_no).char_second <= "00001010";
                 else
-                command_array(cmd_no).char_second <= str(22);
+                command_array(cmd_no).char_second <= std_logic_vector(to_unsigned(natural(character'pos(str(22))),8));
                 end if;
                 if(str(26)&str(27) = "HT") then
                 command_array(cmd_no).char_first1 <= HT;
@@ -181,6 +186,10 @@ begin
     process(CLK)
     begin
        if(CLK'event and CLK = '1') then
+         if(text_input_stream = "01000000") then
+            next_accept <= false;
+            rdy_array <= (others => '0');
+         else
           if(TRG = '1' or RDY_IN = '1' or FAIL = '1') then
             next_accept <= true ;
           end if;
@@ -191,6 +200,7 @@ begin
            else
              rdy_array <= (others => '0');
            end if;
+          end if;
         end if;
      end process;
     
@@ -198,6 +208,11 @@ begin
     process(CLK)
     begin
        if(CLK'event and CLK = '1') then
+         if(text_input_stream = "01000000") then
+            fail_sig <= false;
+            alt_top <= 1;
+            alt_stack <= (others => 0);
+         else
            if (FAIL = '1') then 
                     if(alt_stack(1) = 0) then 
                         fail_sig <= true;
@@ -205,17 +220,25 @@ begin
                         alt_stack(alt_top-1) <= 0;
                         alt_top <= alt_top - 1;
                     end if;
-       elsif ((RDY_IN = '1' or TRG = '1') and  command_array(cmd_read_no).id = 10 ) then    
+           elsif ((RDY_IN = '1' or TRG = '1') and  command_array(cmd_read_no).id = 10 ) then    
             alt_stack(alt_top) <= command_array(cmd_read_no).save;
             alt_top <= alt_top + 1;
-       end if;
+           end if;
+         end if;
      end if;
    end process;
      
      -- Next command 
      process(CLK) 
      begin
-        if(CLK'event and CLK = '1') then  
+        if(CLK'event and CLK = '1') then
+           if(text_input_stream = "01000000") then
+              cmd_read_no <= 1;
+              call_top <= 1;
+              parser_ok_sig <= false;
+              call_stack <= (others => 0);
+           else
+               
            if (FAIL = '1' and alt_stack(1) /= 0) then                                                        
                   cmd_read_no <= alt_stack(alt_top-1);
            elsif (RDY_IN = '1' or TRG = '1' ) then
@@ -285,6 +308,7 @@ begin
                                    end if;   
                   end case;                                                       
             end if;
+          end if;
          end if;
       end process;
           
@@ -301,15 +325,23 @@ begin
                          SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
                          SET_OPTION <= command_array(cmd_read_no).option;
               when 17 => BYTE_TEXT <= command_array(cmd_read_no).char_first;
-              when 19 => STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
+              --when 19 => STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
               when others =>   null;                                                                                                                                              
            end case;
         end if;
     end process;
-          
+    
+    
+    process(CLK)
+    begin
+        if(CLK'event and CLK='1') then
+            continue_sig <= CONTINUE;
+        end if;
+    end process;
+        
           
     ID <= command_array(cmd_read_no).id;
-    NEXT_RDY <= next_rdy_function(rdy_array);
+    NEXT_RDY <= next_rdy_function(rdy_array) or continue_sig;
     PARSER_OK <= '1' when parser_ok_sig else '0';
     END_FAIL <= '1' when fail_sig else '0';
   

@@ -8,7 +8,7 @@ entity OBYTE_VHDL is
 		CLK : in std_logic := '0';
 		TRG_ONE : in std_logic := '0';
 		TEXT_IN : in std_logic_vector(7 downto 0);
-		NEZ_IN : in character := ' ';
+		NEZ_IN : in std_logic_vector(7 downto 0);
 		RDY_ONE : out std_logic := '0');
 end OBYTE_VHDL;
 
