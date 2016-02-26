@@ -45,6 +45,6 @@ begin
 	OBYTE_TRG <= trg_array(17); -- OBYTE trigger
 	STR_TRG <= trg_array(19); -- STR trigger
 	NANY_TRG <= trg_array(16); -- NANY trigger
-	OTHERS_TRG <= (trg_array(9) or trg_array(10) or trg_array(11) or trg_array(12) or trg_array(15) or trg_array(18));
+	--OTHERS_TRG <= (trg_array(9) or trg_array(10) or trg_array(11) or trg_array(12) or trg_array(15) or trg_array(18));
 		
 end Behavioral;

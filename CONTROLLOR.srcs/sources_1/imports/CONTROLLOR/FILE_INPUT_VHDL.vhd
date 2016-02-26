@@ -12,15 +12,24 @@ entity FILE_INPUT_VHDL is
         RDY_IN : in std_logic := '0';
         FAIL : in std_logic := '0' ;
 	    TEXT_IN : in std_logic_vector(7 downto 0);
+	    IMP : in std_logic;
 	    TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
-        ID : out integer := 0;
+        ID : buffer integer := 0;
         BYTE_TEXT : out std_logic_vector(7 downto 0) ;
         SET_TEXT_START : out std_logic_vector(7 downto 0) ;
         SET_TEXT_SECOND : out std_logic_vector(7 downto 0) ;
         SET_OPTION : out integer := 0 ;
-        STR_TEXT : out string(1 to 2) := "  " ;
+        STR_TEXT : out std_logic_vector(15 downto 0) ;
         END_FAIL : buffer std_logic := '0' ;
         PARSER_OK : buffer std_logic := '0';
+        NEXT_IMP : out std_logic;
+        Rset_ctn : out std_logic;
+        Byte_trg : out std_logic;
+        Set_trg : out std_logic;
+        Rset_trg : out std_logic;
+        Obyte_trg : out std_logic;
+        Str_trg : out std_logic;
+        Nany_trg : out std_logic;
         NEXT_RDY : out std_logic := '0');
 end FILE_INPUT_VHDL;
 
@@ -41,10 +50,17 @@ architecture behave of FILE_INPUT_VHDL is
                                                           char_first => "00000000", char_second => "00000000",
                                                                              char_first1 => ' ', char_second1 => ' ', option => 0));
                                                                                                                                            
-   type int_alt_array is array(1 to 50) of integer;
+   type int_alt_array is array(1 to 300) of integer;
    signal alt_stack : int_alt_array := (others => 0) ;
-   type int_call_array is array(1 to 30) of integer;
+   type int_call_array is array(1 to 300) of integer;
    signal call_stack : int_call_array := (others => 0);
+   
+   component reg_pos_et_d_ff
+   	port(clk, D, lat, rst : in std_logic;
+           Q : out std_logic);
+    end component;
+    
+    signal next_run : std_logic := '0';
    
    --attribute mark_debug : string;
    --attribute mark_debug of id : signal is "true";
@@ -113,6 +129,7 @@ architecture behave of FILE_INPUT_VHDL is
 	signal alt_top : natural := 1;
 	
 	signal continue_sig : std_logic := '0';
+	signal next_sig : std_logic := '0';
 	
 begin
   process(CLK)
@@ -125,7 +142,7 @@ begin
 	 
   begin 
 	if(CLK'event and CLK = '1') then
-	   if(TRG = '1') then
+	   if(READ_TRG = '1') then
 	   --Loading command from text file
 	       while not endfile(in_file) loop
 		      readline(in_file, l);
@@ -181,53 +198,87 @@ begin
 	   end if;
 	  end if;
 	end process;
-    
-    -- Make trigger signal to STATE_CONTROLLOR           
+	
+     
+     
+    -- NEXT_RDY <= rdy_array(1) or rdy_array(3) or rdy_array(4) or rdy_array(5) or rdy_array(13) or rdy_array(14) or rdy_array(16) or rdy_array(17) or rdy_array(19) or continue_sig;
+     
     process(CLK)
     begin
-       if(CLK'event and CLK = '1') then
-         if(text_input_stream = "01000000") then
-            next_accept <= false;
-            rdy_array <= (others => '0');
-         else
-          if(TRG = '1' or RDY_IN = '1' or FAIL = '1') then
-            next_accept <= true ;
-          end if;
-          if (next_accept and (not fail_sig) and (not parser_ok_sig)) then
-             rdy_array <= (others => '0');
-             rdy_array( command_array(cmd_read_no).id) <= '1';
-             next_accept <= false;
-           else
-             rdy_array <= (others => '0');
-           end if;
-          end if;
+        if(CLK'event and CLK='1') then
+            if(not fail_sig and not parser_ok_sig) then
+            NEXT_RDY <= (TRG or RDY_IN or FAIL or continue);
+            else
+            NEXT_RDY <= '0';
+            end if;
+        end if;
+    end process;
+     
+     process(CLK)
+     begin
+        if(CLK'event and CLK = '1') then
+            continue_sig <= CONTINUE;
         end if;
      end process;
-    
-    -- Command ALT
-    process(CLK)
-    begin
-       if(CLK'event and CLK = '1') then
-         if(text_input_stream = "01000000") then
-            fail_sig <= false;
-            alt_top <= 1;
-            alt_stack <= (others => 0);
-         else
-           if (FAIL = '1') then 
-                    if(alt_stack(1) = 0) then 
-                        fail_sig <= true;
-                    else                                                        
-                        alt_stack(alt_top-1) <= 0;
-                        alt_top <= alt_top - 1;
-                    end if;
-           elsif ((RDY_IN = '1' or TRG = '1') and  command_array(cmd_read_no).id = 10 ) then    
-            alt_stack(alt_top) <= command_array(cmd_read_no).save;
-            alt_top <= alt_top + 1;
+     
+     Rset_ctn <= CONTINUE;
+     
+     --next_sig <= rdy_array(9) or rdy_array(10) or rdy_array(11) or rdy_array(12) or rdy_array(15) or rdy_array(18);
+     
+     process(CLK)
+     begin
+        if(CLK'event and CLK = '1') then
+            --if((rdy_array(9) or rdy_array(10) or rdy_array(11) or rdy_array(12) or rdy_array(15) or rdy_array(18))='1') then
+            if(command_array(cmd_read_no).id = 9 or command_array(cmd_read_no).id = 10 or command_array(cmd_read_no).id = 11 or command_array(cmd_read_no).id = 12 or command_array(cmd_read_no).id = 15 or command_array(cmd_read_no).id = 18) then
+                next_sig <= '1' ;
+            else
+                next_sig <= '0';
+            end if;
+        end if;
+     end process;
+     
+     --reg : reg_pos_et_d_ff port map (clk, next_sig, '1', '0', next_run);
+     
+     process(CLK)
+     begin
+        if(CLK'event and CLK = '1') then
+            if(next_sig = '1') then
+                next_run <= '1';
+             else
+                next_run <= '0';
+            end if;
+         end if;
+     end process;
+     
+     -- Make trigger signal to STATE_CONTROLLOR           
+     process(CLK)
+     begin
+        if(CLK'event and CLK = '1') then
+          if(text_input_stream = "01000000") then
+             next_accept <= false;
+             rdy_array <= (others => '0');
+          else
+           if(TRG = '1' or RDY_IN = '1' or FAIL = '1' or ID = 9 or ID = 10 or ID = 11 or ID = 12 or ID = 15 or ID = 16) then
+             next_accept <= true ;
+           end if;
+           if (next_accept and (not fail_sig) and (not parser_ok_sig)) then
+              rdy_array <= (others => '0');
+              rdy_array( command_array(cmd_read_no).id) <= '1';
+              next_accept <= false;
+            else
+              rdy_array <= (others => '0');
+            end if;
            end if;
          end if;
-     end if;
-   end process;
-     
+      end process;
+        
+        Byte_trg <= rdy_array(1);
+        Set_trg <= rdy_array(3);
+        Rset_trg <= rdy_array(14) or CONTINUE_sig;
+        Obyte_trg <= rdy_array(17);
+        Str_trg <= rdy_array(19);
+        Nany_trg <= rdy_array(16);
+        
      -- Next command 
      process(CLK) 
      begin
@@ -237,11 +288,22 @@ begin
               call_top <= 1;
               parser_ok_sig <= false;
               call_stack <= (others => 0);
+              fail_sig <= false;
+              alt_top <= 1;
+              alt_stack <= (others => 0);
            else
                
-           if (FAIL = '1' and alt_stack(1) /= 0) then                                                        
-                  cmd_read_no <= alt_stack(alt_top-1);
-           elsif (RDY_IN = '1' or TRG = '1' ) then
+           if (FAIL = '1') then
+               --ID <= command_array(cmd_read_no).id;
+               if(alt_stack(1) = 0) then 
+                  fail_sig <= true;
+               else
+                  cmd_read_no <= alt_stack(alt_top-1);                                                        
+                  alt_stack(alt_top-1) <= 0;
+                  alt_top <= alt_top - 1;
+              end if;
+           elsif (RDY_IN = '1' or TRG = '1' or ID = 9 or ID = 10 or ID = 11 or ID = 12 or ID = 15 or ID = 16) then
+              --ID <= command_array(cmd_read_no).id;
               case command_array(cmd_read_no).id is
                    when 9 =>  call_stack(call_top) <= command_array(cmd_read_no).save;
                               if(command_array(cmd_read_no).next_cmd /= 0) then
@@ -249,7 +311,14 @@ begin
                               else
                                 cmd_read_no <= cmd_read_no + 1;
                               end if;
-                              call_top <= call_top + 1;                                                                     
+                              call_top <= call_top + 1; 
+                    when 10 =>alt_stack(alt_top) <= command_array(cmd_read_no).save;
+                              alt_top <= alt_top + 1;
+                              if(command_array(cmd_read_no).next_cmd /= 0) then
+                                cmd_read_no <= command_array(cmd_read_no).next_cmd;
+                              else
+                                cmd_read_no <= cmd_read_no + 1;
+                              end if;                                                                   
                     when 12 => if(cmd_read_no = 7) then
                                             case text_in is
                                                  when "01110100" => cmd_read_no <= 81; --t
@@ -259,7 +328,7 @@ begin
                                                  when "01011011" => cmd_read_no <= 58;
                                                  when "01101110" => cmd_read_no <= 76;   
                                                  when "01001111" => cmd_read_no <= 86;
-                                                 when others => if(text_in >= "00110000" and text_in <= "00111001") then
+                                                 when others => if((text_in >= "00110000" and text_in <= "00111001") or (text_in = "00101101")) then
                                                                    cmd_read_no <= 11;
                                                                 else 
                                                                     cmd_read_no <= 8;
@@ -283,7 +352,8 @@ begin
                                                   case text_in is
                                                       when "00101110" => cmd_read_no <= 16;   
                                                       when "00000100" => cmd_read_no <= 8;
-                                                      when others => cmd_read_no <= 15; 
+                                                      --when "00101100" => cmd_read_no <= 8;
+                                                      when others =>  cmd_read_no <= 15; 
                                                   end case;
                                               elsif(cmd_read_no = 101) then
                                                    case text_in is
@@ -292,7 +362,7 @@ begin
                                                        when others => cmd_read_no <= 102;
                                                    end case;
                                                end if;         
-                                                                                    
+                                                             
                         when 15 => if(call_stack(1) = 0) then 
                                        parser_ok_sig <= true;
                                    else
@@ -306,7 +376,8 @@ begin
                                    else
                                         cmd_read_no <= cmd_read_no + 1;
                                    end if;   
-                  end case;                                                       
+                  end case; 
+                                                    
             end if;
           end if;
          end if;
@@ -325,42 +396,20 @@ begin
                          SET_TEXT_SECOND <= command_array(cmd_read_no).char_second;
                          SET_OPTION <= command_array(cmd_read_no).option;
               when 17 => BYTE_TEXT <= command_array(cmd_read_no).char_first;
-              --when 19 => STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
+              when 19 => STR_TEXT <= command_array(cmd_read_no).char_first&command_array(cmd_read_no).char_second;
               when others =>   null;                                                                                                                                              
            end case;
         end if;
     end process;
     
-    
-    process(CLK)
-    begin
-        if(CLK'event and CLK='1') then
-            continue_sig <= CONTINUE;
-        end if;
-    end process;
+
         
           
     ID <= command_array(cmd_read_no).id;
-    NEXT_RDY <= next_rdy_function(rdy_array) or continue_sig;
+    --NEXT_RDY <=  or continue_sig;
+    --NEXT_RDY <= TRG or RDY_IN or FAIL or 
     PARSER_OK <= '1' when parser_ok_sig else '0';
     END_FAIL <= '1' when fail_sig else '0';
   
-  -- Parser result            
-  process(CLK)
-     variable buf_out : LINE ;
-     variable end_sig : boolean := true;
-  begin
-     if(CLK'event and CLK = '0') then  
-        if(fail_sig and end_sig) then
-             write(buf_out,string'("PARSER ERROR"));
-             writeline(output,buf_out);
-             end_sig := false;
-     elsif(parser_ok_sig and end_sig) then
-             write(buf_out,string'("PARSER OK"));
-             writeline(output,buf_out);
-             end_sig := false;
-     end if;     
-  end if;
-end process;
 
 end behave;
