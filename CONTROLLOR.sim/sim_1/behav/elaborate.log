@@ -10,13 +10,10 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package ieee.std_logic_1164
 Compiling package std.textio
-Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_textio
-Compiling package unisim.vcomponents
+Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_unsigned
 Compiling architecture behave of entity xil_defaultlib.FILE_INPUT_VHDL [file_input_vhdl_default]
-Compiling architecture rtl of entity xil_defaultlib.MEMORY_VHDL [memory_vhdl_default]
 Compiling architecture behavioral of entity xil_defaultlib.TEXT_INPUT_VHDL [text_input_vhdl_default]
 Compiling architecture behavioral of entity xil_defaultlib.STATE_CONTROLLOR_VHDL [state_controllor_vhdl_default]
 Compiling architecture behavioral of entity xil_defaultlib.BYTE_VHDL [byte_vhdl_default]

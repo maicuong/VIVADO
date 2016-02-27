@@ -14,7 +14,7 @@ entity FILE_INPUT_VHDL is
 	    TEXT_IN : in std_logic_vector(7 downto 0);
 	    IMP : in std_logic;
 	    TEXT_INPUT_STREAM : in std_logic_vector(7 downto 0);
-        ID : buffer integer := 0;
+        ID : out integer := 0;
         BYTE_TEXT : out std_logic_vector(7 downto 0) ;
         SET_TEXT_START : out std_logic_vector(7 downto 0) ;
         SET_TEXT_SECOND : out std_logic_vector(7 downto 0) ;
@@ -221,7 +221,7 @@ begin
         end if;
      end process;
      
-     Rset_ctn <= CONTINUE;
+     Rset_ctn <= CONTINUE_sig;
      
      --next_sig <= rdy_array(9) or rdy_array(10) or rdy_array(11) or rdy_array(12) or rdy_array(15) or rdy_array(18);
      
@@ -258,7 +258,7 @@ begin
              next_accept <= false;
              rdy_array <= (others => '0');
           else
-           if(TRG = '1' or RDY_IN = '1' or FAIL = '1' or ID = 9 or ID = 10 or ID = 11 or ID = 12 or ID = 15 or ID = 16) then
+           if(TRG = '1' or RDY_IN = '1' or FAIL = '1') then
              next_accept <= true ;
            end if;
            if (next_accept and (not fail_sig) and (not parser_ok_sig)) then
@@ -274,7 +274,7 @@ begin
         
         Byte_trg <= rdy_array(1);
         Set_trg <= rdy_array(3);
-        Rset_trg <= rdy_array(14) or CONTINUE_sig;
+        Rset_trg <= rdy_array(14);
         Obyte_trg <= rdy_array(17);
         Str_trg <= rdy_array(19);
         Nany_trg <= rdy_array(16);
@@ -302,7 +302,7 @@ begin
                   alt_stack(alt_top-1) <= 0;
                   alt_top <= alt_top - 1;
               end if;
-           elsif (RDY_IN = '1' or TRG = '1' or ID = 9 or ID = 10 or ID = 11 or ID = 12 or ID = 15 or ID = 16) then
+           elsif (RDY_IN = '1' or TRG = '1') then
               --ID <= command_array(cmd_read_no).id;
               case command_array(cmd_read_no).id is
                    when 9 =>  call_stack(call_top) <= command_array(cmd_read_no).save;
@@ -407,9 +407,25 @@ begin
           
     ID <= command_array(cmd_read_no).id;
     --NEXT_RDY <=  or continue_sig;
-    --NEXT_RDY <= TRG or RDY_IN or FAIL or 
-    PARSER_OK <= '1' when parser_ok_sig else '0';
-    END_FAIL <= '1' when fail_sig else '0';
+    --NEXT_RDY <= TRG or RDY_IN or FAIL or
+    
+    process(CLK)
+    begin
+        if(CLK'event and CLK = '1')then 
+            if(parser_ok_sig) then
+                PARSER_OK <= '1';
+             else
+                PARSER_OK <= '0';
+             end if;
+             
+                 if(fail_sig) then
+                     END_FAIL <= '1';
+                  else
+                     END_FAIL <= '0';
+                  end if;
+ 
+        end if;
+    end process;
   
 
 end behave;
